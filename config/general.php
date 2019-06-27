@@ -25,24 +25,37 @@ return [
 
         // Whether to save the project config out to config/project.yaml
         // (see https://docs.craftcms.com/v3/project-config.html)
-        'useProjectConfigFile' => false,
+        'useProjectConfigFile' => true,
+
+        // Path to error templates
+        'errorTemplatePrefix' => '_error/',
+
+        // Aliases
+        'aliases' => [
+            '@defaultUrl' => getenv('DEFAULT_SITE_URL'),
+            '@defaultUrlEn' => getenv('DEFAULT_SITE_URL') . '/en',
+            '@defaultUrlFr' => getenv('DEFAULT_SITE_URL') . '/fr',
+            '@rootPath' => getenv('ROOT_PATH'),
+            '@publicPath' => getenv('ROOT_PATH') . '/web', 
+        ],
     ],
 
     // Dev environment settings
     'dev' => [
         // Dev Mode (see https://craftcms.com/guides/what-dev-mode-does)
         'devMode' => true,
+        'allowAdminChanges' => true,
     ],
 
     // Staging environment settings
     'staging' => [
         // Set this to `false` to prevent administrative changes from being made on staging
-        'allowAdminChanges' => true,
+        'allowAdminChanges' => false,
     ],
 
     // Production environment settings
     'production' => [
         // Set this to `false` to prevent administrative changes from being made on production
-        'allowAdminChanges' => true,
+        'allowAdminChanges' => false,
     ],
 ];

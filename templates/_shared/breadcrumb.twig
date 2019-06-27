@@ -1,0 +1,23 @@
+{#
+ |------------------------------------------------------------------------------
+ | Rich Text Block Template
+ |------------------------------------------------------------------------------
+#}
+
+<nav id="wb-bc"  property="breadcrumb">
+    <h2 class="wb-inv">{{ 'You are here:'|t }}</h2>
+    <div class="container">
+        <ol class='breadcrumb'>
+            <li><a href='{{ siteUrl }}'>{{ 'Home'|t }}</a></li>
+            {% set breadcrumbs = entry.ancestors.all() %}
+            {% if breadcrumbs|length %}
+                {% for crumb in breadcrumbs %}
+                    <li><a href="{{ crumb.url }}">{{ crumb.title }}</a></li>
+                {% endfor %}
+            {% endif %}
+            {% if craft.app.request.absoluteUrl() != siteUrl %}
+                <li><a href="{{ entry.url }}">{{ entry.title }}</a></li>
+            {% endif %}
+        </ol>
+    </div>
+</nav>

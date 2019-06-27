@@ -1,0 +1,8 @@
+{% block page %}
+    {% include '_shared/header' %}
+    {% block pageContent %}
+        {% set bodyContent = entry.body ?? null %}
+        {% include '_body' with { body: bodyContent } %}
+    {% endblock %}
+    {% include '_shared/footer' %}
+{% endblock %}
