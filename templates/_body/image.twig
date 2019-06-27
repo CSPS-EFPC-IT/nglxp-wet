@@ -1,0 +1,31 @@
+{#
+ |------------------------------------------------------------------------------
+ | Image Block Template
+ |------------------------------------------------------------------------------
+#}
+
+{% set imageClass = [
+    'img-responsive',
+    block.imageStyle,
+    block.alignment
+] %}
+
+{# Block output #}
+{% set image = block.image.one() ?? null %}
+{% if image %}
+    
+    {% if block.enableLightbox %}
+    <a href="{{ image.url }}" class="wb-lbx" title="{{ block.altText }}">
+    {% endif %}
+    
+    <img src="{{ image.url }}" 
+        alt="{{ block.altText }}" 
+        class="{{ imageClass|join(' ') }}" 
+        width="{{ image.width }}" 
+        height="{{ image.height }}">
+
+    {% if block.enableLightbox %}
+    </a>
+    {% endif %}
+    
+{% endif %}
