@@ -21,3 +21,6 @@ bin/deploy_key
 
 # Remove license from git
 config/license.key
+
+# Remove AWS keypair
+nglxp_keypair.pem
