@@ -1,0 +1,35 @@
+{#
+ |------------------------------------------------------------------------------
+ | Landing Page Template
+ |------------------------------------------------------------------------------
+#}
+
+{% extends '_layout/default' %}
+{% block page %}
+
+<div id="sp">
+<header role="banner">
+    <div id="wb-bnr" class="container">
+        <object id="gcwu-sig" type="image/svg+xml" tabindex="-1" role="img" data="/dist/gcweb/assets/sig-blk-en.svg" aria-label="Government of Canada"></object>
+    </div>
+</header>
+<main role="main" property="mainContentOfPage" class="container">
+    <div class="col-md-12">
+        <h1>Welcome / <span lang="fr">Bienvenue</span></h1>
+        <section class="col-md-6">
+            <h2>Canada School<br />
+                of Public Service</h2>
+            <a class="btn btn-lg btn-primary btn-block" href="/en/">English</a>
+            <a class="btn btn-lg btn-default btn-block" href="http://nglxp-wet.test/termsandconditions/index-eng.aspx" rel="license">Terms and conditions</a>
+        </section>
+        <section class="col-md-6" lang="fr">
+            <h2 lang="fr">&Eacute;cole de la fonction<br />
+                publique du Canada</h2>
+            <a class="btn btn-lg btn-primary btn-block" href="/fr/">Français</a>
+            <a class="btn btn-lg btn-default btn-block" href="http://nglxp-wet.test/termsandconditions/index-fra.aspx" rel="license">Avis</a>
+        </section>
+    </div>
+</main>
+</div>
+
+{% endblock %}
