@@ -189,7 +189,7 @@ categoryGroups:
         hasUrls: false
         uriFormat: null
         template: null
-dateModified: 1561578926
+dateModified: 1563164424
 email:
   fromEmail: $SYSTEM_EMAIL_ADDRESS
   fromName: $SYSTEM_EMAIL_SENDER_NAME
@@ -430,6 +430,134 @@ fields:
       columnType: text
     contentColumnType: text
     fieldGroup: 996d0575-c87f-4fa8-a027-535c0523a9a4
+  178a316b-7205-470e-9709-317d6f24fbac:
+    name: 'Button Full Width'
+    handle: buttonFullWidth
+    instructions: 'Use to create block level buttons (those that span the full width of a parent).'
+    searchable: true
+    translationMethod: none
+    translationKeyFormat: null
+    type: craft\fields\Lightswitch
+    settings:
+      default: ''
+    contentColumnType: boolean
+    fieldGroup: e4089825-4346-4eed-813e-d1032e323d05
+  1986fd69-4ea7-4ab2-a26f-4e87ed88623b:
+    name: 'Video Title'
+    handle: videoTitle
+    instructions: 'Add the title of the video.'
+    searchable: true
+    translationMethod: language
+    translationKeyFormat: null
+    type: craft\fields\PlainText
+    settings:
+      placeholder: ''
+      code: ''
+      multiline: ''
+      initialRows: '4'
+      charLimit: ''
+      columnType: text
+    contentColumnType: text
+    fieldGroup: e4089825-4346-4eed-813e-d1032e323d05
+  1aaf8984-7594-4240-b9e5-28dd722351d1:
+    name: 'Youtube Url'
+    handle: youtubeUrl
+    instructions: 'Add the youtube page URL.'
+    searchable: true
+    translationMethod: language
+    translationKeyFormat: null
+    type: craft\fields\Url
+    settings:
+      placeholder: ''
+      maxLength: '255'
+    contentColumnType: string(255)
+    fieldGroup: e4089825-4346-4eed-813e-d1032e323d05
+  1d05fb95-fdf6-42f7-b7d5-dfbd06929ab0:
+    name: Link
+    handle: blockLink
+    instructions: 'Set the element link.'
+    searchable: true
+    translationMethod: language
+    translationKeyFormat: null
+    type: fruitstudios\linkit\fields\LinkitField
+    settings:
+      selectLinkText: ''
+      types:
+        fruitstudios\linkit\models\Email:
+          enabled: '1'
+          customLabel: ''
+          customPlaceholder: ''
+        fruitstudios\linkit\models\Phone:
+          enabled: '1'
+          customLabel: ''
+          customPlaceholder: ''
+        fruitstudios\linkit\models\Url:
+          enabled: '1'
+          customLabel: ''
+          customPlaceholder: ''
+          allowAlias: '1'
+          allowMailto: '1'
+          allowHash: '1'
+          allowPaths: '1'
+        fruitstudios\linkit\models\Twitter:
+          enabled: ''
+          customLabel: ''
+          customPlaceholder: ''
+        fruitstudios\linkit\models\Facebook:
+          enabled: ''
+          customLabel: ''
+          customPlaceholder: ''
+        fruitstudios\linkit\models\Instagram:
+          enabled: ''
+          customLabel: ''
+          customPlaceholder: ''
+        fruitstudios\linkit\models\LinkedIn:
+          enabled: ''
+          customLabel: ''
+          customPlaceholder: ''
+        fruitstudios\linkit\models\Entry:
+          enabled: '1'
+          customLabel: ''
+          sources: '*'
+          customSelectionLabel: ''
+        fruitstudios\linkit\models\Category:
+          enabled: '1'
+          customLabel: ''
+          sources: '*'
+          customSelectionLabel: ''
+        fruitstudios\linkit\models\Asset:
+          enabled: '1'
+          customLabel: ''
+          sources: '*'
+          customSelectionLabel: ''
+        fruitstudios\linkit\models\User:
+          enabled: ''
+          customLabel: ''
+          sources: '*'
+          customSelectionLabel: ''
+          userPath: ''
+      allowCustomText: '1'
+      defaultText: ''
+      allowTarget: '1'
+    contentColumnType: text
+    fieldGroup: e4089825-4346-4eed-813e-d1032e323d05
+  27187c43-5082-4185-b805-5e3e3be34d57:
+    name: Text
+    handle: text
+    instructions: 'Set the block main text.'
+    searchable: true
+    translationMethod: language
+    translationKeyFormat: null
+    type: craft\fields\PlainText
+    settings:
+      placeholder: ''
+      code: ''
+      multiline: ''
+      initialRows: '4'
+      charLimit: ''
+      columnType: text
+    contentColumnType: text
+    fieldGroup: e4089825-4346-4eed-813e-d1032e323d05
   30daa2fc-da41-475f-ae5e-57b9baba167c:
     name: Alignment
     handle: alignment
@@ -474,6 +602,52 @@ fields:
       charLimit: ''
       columnType: text
     contentColumnType: text
+    fieldGroup: e4089825-4346-4eed-813e-d1032e323d05
+  4bf01e02-d8a2-4348-b4bd-a810d21065bc:
+    name: 'Carousel Transition'
+    handle: carouselTransition
+    instructions: 'Specify the tab panel transition type by selecting one of the following options.'
+    searchable: true
+    translationMethod: none
+    translationKeyFormat: null
+    type: craft\fields\Dropdown
+    settings:
+      optgroups: true
+      options:
+        -
+          label: Fading
+          value: fade
+          default: '1'
+        -
+          label: 'Horizontal Sliding'
+          value: slide
+          default: ''
+        -
+          label: 'Vertical Sliding'
+          value: slidevert
+          default: ''
+    contentColumnType: string
+    fieldGroup: e4089825-4346-4eed-813e-d1032e323d05
+  4c1ea90c-6468-4078-9c22-b2a58bcb47b8:
+    name: 'Carousel Speed'
+    handle: carouselSpeed
+    instructions: 'Configure the tab rotation speed.'
+    searchable: true
+    translationMethod: none
+    translationKeyFormat: null
+    type: craft\fields\Dropdown
+    settings:
+      optgroups: true
+      options:
+        -
+          label: Slow
+          value: slow
+          default: '1'
+        -
+          label: Fast
+          value: fast
+          default: ''
+    contentColumnType: string
     fieldGroup: e4089825-4346-4eed-813e-d1032e323d05
   4d18f30f-60ec-4c6b-bb36-e6adaed44df2:
     name: 'Enable Lightbox'
@@ -616,6 +790,18 @@ fields:
       fieldLayout: row
       selectionLabel: ''
     contentColumnType: string
+    fieldGroup: e4089825-4346-4eed-813e-d1032e323d05
+  5d291f27-e67e-4a36-9a4e-d04404efd6ee:
+    name: 'Carousel Exclude Play'
+    handle: carouselExcludePlay
+    instructions: 'Exclude the play button from the carousel controls.'
+    searchable: true
+    translationMethod: none
+    translationKeyFormat: null
+    type: craft\fields\Lightswitch
+    settings:
+      default: ''
+    contentColumnType: boolean
     fieldGroup: e4089825-4346-4eed-813e-d1032e323d05
   5d31b541-85df-4bc7-8d73-ab0f8e378e72:
     name: 'LMS Course URL'
@@ -767,6 +953,24 @@ fields:
       localizeRelations: ''
     contentColumnType: string
     fieldGroup: e4089825-4346-4eed-813e-d1032e323d05
+  79e7eaf5-93b0-4f69-9437-ceb83bb68698:
+    name: 'Carousel Items'
+    handle: carouselItems
+    instructions: 'Add content to the carousel.'
+    searchable: true
+    translationMethod: site
+    translationKeyFormat: null
+    type: verbb\supertable\fields\SuperTableField
+    settings:
+      minRows: ''
+      maxRows: ''
+      contentTable: '{{%stc_carouselitems}}'
+      propagationMethod: all
+      staticField: ''
+      fieldLayout: row
+      selectionLabel: ''
+    contentColumnType: string
+    fieldGroup: e4089825-4346-4eed-813e-d1032e323d05
   7b60b7a9-2d4d-4b42-b947-0d5bf0d29503:
     name: 'Equalize Columns Height'
     handle: equalizeColumnsHeight
@@ -824,6 +1028,47 @@ fields:
       localizeRelations: ''
     contentColumnType: string
     fieldGroup: aae3acdb-e54a-47cb-ba69-ca6500f39405
+  9486cb75-1a99-4e99-97cc-90ff06fd307e:
+    name: 'Button Type'
+    handle: buttonType
+    instructions: 'Use to add colours to buttons. Colours signify such things as a link to warning information (caution button) to a link to the next learning module (success button).'
+    searchable: true
+    translationMethod: none
+    translationKeyFormat: null
+    type: craft\fields\Dropdown
+    settings:
+      optgroups: true
+      options:
+        -
+          label: Default
+          value: btn-default
+          default: '1'
+        -
+          label: Primary
+          value: btn-primary
+          default: ''
+        -
+          label: Success
+          value: btn-success
+          default: ''
+        -
+          label: Info
+          value: btn-info
+          default: ''
+        -
+          label: Warning
+          value: btn-warning
+          default: ''
+        -
+          label: Danger
+          value: btn-danger
+          default: ''
+        -
+          label: Link
+          value: btn-link
+          default: ''
+    contentColumnType: string
+    fieldGroup: e4089825-4346-4eed-813e-d1032e323d05
   96506d95-3831-48b3-bbb0-080fe3c3975b:
     name: 'Heading Link'
     handle: headingLink
@@ -1035,6 +1280,18 @@ fields:
       columnType: text
     contentColumnType: text
     fieldGroup: e4089825-4346-4eed-813e-d1032e323d05
+  d4fbaec4-4c9d-4852-91f4-dbcf6084aeae:
+    name: 'Carousel Autoplay'
+    handle: carouselAutoplay
+    instructions: 'Play the carousel on page load.'
+    searchable: true
+    translationMethod: none
+    translationKeyFormat: null
+    type: craft\fields\Lightswitch
+    settings:
+      default: ''
+    contentColumnType: boolean
+    fieldGroup: e4089825-4346-4eed-813e-d1032e323d05
   d6c10f33-7140-4969-ace1-bad77eedd52e:
     name: 'Heading Size'
     handle: headingSize
@@ -1068,6 +1325,35 @@ fields:
         -
           label: H6
           value: h6
+          default: ''
+    contentColumnType: string
+    fieldGroup: e4089825-4346-4eed-813e-d1032e323d05
+  d7094ffa-8ba4-4975-8b78-269b1c5def10:
+    name: 'Button Size'
+    handle: buttonSize
+    instructions: 'Use to increase or decrease the size of a button.'
+    searchable: true
+    translationMethod: none
+    translationKeyFormat: null
+    type: craft\fields\Dropdown
+    settings:
+      optgroups: true
+      options:
+        -
+          label: Default
+          value: default
+          default: '1'
+        -
+          label: Large
+          value: btn-lg
+          default: ''
+        -
+          label: Small
+          value: btn-sm
+          default: ''
+        -
+          label: 'Extra Small'
+          value: btn-xs
           default: ''
     contentColumnType: string
     fieldGroup: e4089825-4346-4eed-813e-d1032e323d05
@@ -1361,23 +1647,65 @@ fields:
           default: ''
     contentColumnType: text
     fieldGroup: e4089825-4346-4eed-813e-d1032e323d05
+  f92b0b75-2243-4c6d-a382-00f28b055903:
+    name: 'Carousel Style'
+    handle: carouselStyle
+    instructions: 'Select one of the two carousel styles.'
+    searchable: true
+    translationMethod: none
+    translationKeyFormat: null
+    type: craft\fields\Dropdown
+    settings:
+      optgroups: true
+      options:
+        -
+          label: 'Style 1'
+          value: carousel-s1
+          default: '1'
+        -
+          label: 'Style 2'
+          value: carousel-s2
+          default: ''
+    contentColumnType: string
+    fieldGroup: e4089825-4346-4eed-813e-d1032e323d05
+  ff00aba9-5514-4cd4-8d15-6e6bfe2dfaa4:
+    name: Caption
+    handle: caption
+    instructions: 'Customize the asset caption.'
+    searchable: true
+    translationMethod: language
+    translationKeyFormat: null
+    type: craft\redactor\Field
+    settings:
+      redactorConfig: Simple.json
+      purifierConfig: ''
+      cleanupHtml: true
+      removeInlineStyles: '1'
+      removeEmptyTags: '1'
+      removeNbsp: '1'
+      purifyHtml: '1'
+      columnType: text
+      availableVolumes: '*'
+      availableTransforms: '*'
+    contentColumnType: text
+    fieldGroup: aae3acdb-e54a-47cb-ba69-ca6500f39405
 neoBlockTypeGroups:
-  32611283-64ea-411a-8378-78cb2e2d75c2:
-    field: 5bcddc82-216a-41f9-bd6c-471428939ea1
-    name: 'Media Blocks'
-    sortOrder: 8
-  4d0d100b-9b2b-4e19-a8d4-71cd4a6e3f45:
+  5f19f018-f137-4b75-b5f5-f8339f3ed57c:
     field: 5bcddc82-216a-41f9-bd6c-471428939ea1
     name: 'Text Blocks'
     sortOrder: 3
-  755c3a75-c1cb-46d0-b4f8-b245d6b352c0:
-    field: 5bcddc82-216a-41f9-bd6c-471428939ea1
-    name: 'Premade Blocks'
-    sortOrder: 21
-  cf1ab217-2793-4a36-8762-bf00c6c3fca2:
+  a02c980e-db26-4aa0-9810-eff6d0537ed9:
     field: 5bcddc82-216a-41f9-bd6c-471428939ea1
     name: 'Advanced Blocks'
     sortOrder: 13
+  c38c48bc-6cda-41c6-b931-0539a9f590ad:
+    field: 5bcddc82-216a-41f9-bd6c-471428939ea1
+    name: 'Media Blocks'
+    sortOrder: 8
+  c5c5fe52-864c-4282-954d-611cbff9a716:
+    field: 5bcddc82-216a-41f9-bd6c-471428939ea1
+    name: 'Premade Blocks'
+    sortOrder: 21
 neoBlockTypes:
   0d9cef78-2f29-4a80-92b1-0228772343e0:
     field: 5bcddc82-216a-41f9-bd6c-471428939ea1
@@ -1397,6 +1725,41 @@ neoBlockTypes:
     maxChildBlocks: 0
     childBlocks: ''
     topLevel: false
+    fieldLayouts:
+      cdf2b69a-7d3e-4c15-a8f0-67dceea44b7a:
+        tabs:
+          -
+            name: Content
+            sortOrder: 1
+            fields:
+              79e7eaf5-93b0-4f69-9437-ceb83bb68698:
+                required: true
+                sortOrder: 1
+          -
+            name: Settings
+            sortOrder: 2
+            fields:
+              4bf01e02-d8a2-4348-b4bd-a810d21065bc:
+                required: false
+                sortOrder: 3
+              4c1ea90c-6468-4078-9c22-b2a58bcb47b8:
+                required: false
+                sortOrder: 2
+              5d291f27-e67e-4a36-9a4e-d04404efd6ee:
+                required: false
+                sortOrder: 5
+              c4b752da-d488-479a-ab58-648146b8b804:
+                required: false
+                sortOrder: 6
+              d4fbaec4-4c9d-4852-91f4-dbcf6084aeae:
+                required: false
+                sortOrder: 4
+              d99f24f5-652e-49ee-87f4-18d022b69504:
+                required: false
+                sortOrder: 7
+              f92b0b75-2243-4c6d-a382-00f28b055903:
+                required: false
+                sortOrder: 1
   10ae6bd2-ef8c-4628-95ad-0cd23a31d853:
     field: 5bcddc82-216a-41f9-bd6c-471428939ea1
     name: Column
@@ -1426,7 +1789,7 @@ neoBlockTypes:
       - socialShare
     topLevel: false
     fieldLayouts:
-      b8ca1154-980c-4a0e-960f-1cd3bb6a1510:
+      e6c41348-efb6-475f-b991-feaccd56c36b:
         tabs:
           -
             name: Content
@@ -1457,7 +1820,7 @@ neoBlockTypes:
     childBlocks: ''
     topLevel: false
     fieldLayouts:
-      26ef0e4a-49c0-4207-a137-d1dbf9038136:
+      530ff929-c9cd-4a51-b647-a7fb13c16664:
         tabs:
           -
             name: Content
@@ -1493,7 +1856,7 @@ neoBlockTypes:
       - col
     topLevel: true
     fieldLayouts:
-      279815b7-e70e-45aa-b512-597a671da13b:
+      54e36304-d1e7-401c-9d26-cf1010997faa:
         tabs:
           -
             name: Content
@@ -1524,7 +1887,7 @@ neoBlockTypes:
     childBlocks: ''
     topLevel: false
     fieldLayouts:
-      40580a20-acb7-45e1-8aeb-8781c9e74789:
+      57bc4b11-447b-4431-9696-71af413017aa:
         tabs:
           -
             name: Content
@@ -1562,7 +1925,7 @@ neoBlockTypes:
     childBlocks: ''
     topLevel: false
     fieldLayouts:
-      85623f30-c0a1-4acb-bb14-09b00ee46370:
+      3a671b7a-d36a-41ff-b39f-7de143d88dc5:
         tabs:
           -
             name: Settings
@@ -1583,6 +1946,35 @@ neoBlockTypes:
     maxChildBlocks: 0
     childBlocks: ''
     topLevel: false
+    fieldLayouts:
+      7cb9a113-ff9a-4840-8864-044cbf8ff852:
+        tabs:
+          -
+            name: Content
+            sortOrder: 1
+            fields:
+              1d05fb95-fdf6-42f7-b7d5-dfbd06929ab0:
+                required: true
+                sortOrder: 1
+          -
+            name: Settings
+            sortOrder: 2
+            fields:
+              178a316b-7205-470e-9709-317d6f24fbac:
+                required: false
+                sortOrder: 3
+              9486cb75-1a99-4e99-97cc-90ff06fd307e:
+                required: false
+                sortOrder: 1
+              c4b752da-d488-479a-ab58-648146b8b804:
+                required: false
+                sortOrder: 5
+              d7094ffa-8ba4-4975-8b78-269b1c5def10:
+                required: false
+                sortOrder: 2
+              d99f24f5-652e-49ee-87f4-18d022b69504:
+                required: false
+                sortOrder: 4
   68a8f88c-9f6c-43f3-a83d-da734617a665:
     field: 5bcddc82-216a-41f9-bd6c-471428939ea1
     name: Panel
@@ -1602,7 +1994,7 @@ neoBlockTypes:
     childBlocks: ''
     topLevel: false
     fieldLayouts:
-      36c21ae3-f675-484c-8851-3818c29f17db:
+      cc517bd2-5d4e-48d1-b2f0-f6b5142e1e2f:
         tabs:
           -
             name: Content
@@ -1631,7 +2023,7 @@ neoBlockTypes:
     childBlocks: ''
     topLevel: false
     fieldLayouts:
-      80f2d1e3-aca5-4446-9a66-0b4b337f3523:
+      ea72cecf-afa1-47c7-a481-f64094a7b7c4:
         tabs:
           -
             name: Content
@@ -1687,7 +2079,7 @@ neoBlockTypes:
     childBlocks: ''
     topLevel: false
     fieldLayouts:
-      1410f74a-e551-4f09-9648-2b5a248d0b1b:
+      ee09fc4b-362d-4529-aab5-a3e55af98464:
         tabs:
           -
             name: Content
@@ -1737,7 +2129,7 @@ neoBlockTypes:
     childBlocks: ''
     topLevel: false
     fieldLayouts:
-      ff293323-0b6a-4534-8320-1c0738354a50:
+      e9d05036-2bfb-4054-87ea-3b1bc588a660:
         tabs:
           -
             name: Content
@@ -1774,6 +2166,32 @@ neoBlockTypes:
     maxChildBlocks: 0
     childBlocks: ''
     topLevel: false
+    fieldLayouts:
+      15b5a2a0-301b-4156-b90b-970716fc18c6:
+        tabs:
+          -
+            name: Content
+            sortOrder: 1
+            fields:
+              1986fd69-4ea7-4ab2-a26f-4e87ed88623b:
+                required: false
+                sortOrder: 1
+              1aaf8984-7594-4240-b9e5-28dd722351d1:
+                required: true
+                sortOrder: 2
+              ff00aba9-5514-4cd4-8d15-6e6bfe2dfaa4:
+                required: false
+                sortOrder: 3
+          -
+            name: Settings
+            sortOrder: 2
+            fields:
+              c4b752da-d488-479a-ab58-648146b8b804:
+                required: false
+                sortOrder: 1
+              d99f24f5-652e-49ee-87f4-18d022b69504:
+                required: false
+                sortOrder: 2
   e4eed610-3818-4f3c-b971-62dd15acdaff:
     field: 5bcddc82-216a-41f9-bd6c-471428939ea1
     name: Table
@@ -1793,7 +2211,7 @@ neoBlockTypes:
     childBlocks: ''
     topLevel: false
     fieldLayouts:
-      ac554a44-6dbe-4732-8410-a8baa9027cc6:
+      06845fa1-8e49-4b0f-81e0-26042850d8b2:
         tabs:
           -
             name: Content
@@ -1912,14 +2330,13 @@ plugins:
   super-table:
     edition: standard
     enabled: true
-    schemaVersion: 2.0.12
+    schemaVersion: 2.2.0
 sections:
   151bd318-9632-44f8-9304-47db451486d0:
     name: Ebooks
     handle: ebooks
     type: channel
     enableVersioning: true
-    propagateEntries: true
     siteSettings:
       0f776df8-4195-4588-9f72-337d0aa2d29d:
         enabledByDefault: true
@@ -1939,12 +2356,12 @@ sections:
         titleLabel: Title
         titleFormat: ''
         sortOrder: 1
+    propagationMethod: all
   3db28c50-68f9-47d8-b853-4570ef0e1839:
     name: Blogs
     handle: blogs
     type: channel
     enableVersioning: true
-    propagateEntries: true
     siteSettings:
       0f776df8-4195-4588-9f72-337d0aa2d29d:
         enabledByDefault: true
@@ -1964,12 +2381,12 @@ sections:
         titleLabel: Title
         titleFormat: ''
         sortOrder: 1
+    propagationMethod: all
   5a60112c-1934-414e-a1dd-dd323c3e14a1:
     name: 'Case Studies'
     handle: caseStudies
     type: channel
     enableVersioning: true
-    propagateEntries: true
     siteSettings:
       0f776df8-4195-4588-9f72-337d0aa2d29d:
         enabledByDefault: true
@@ -1989,12 +2406,12 @@ sections:
         titleLabel: Title
         titleFormat: ''
         sortOrder: 1
+    propagationMethod: all
   647a11ac-aef9-4f0d-80dc-2b443aa1264f:
     name: 'Job Aids Catalog'
     handle: jobAidsCatalog
     type: single
     enableVersioning: true
-    propagateEntries: true
     siteSettings:
       0f776df8-4195-4588-9f72-337d0aa2d29d:
         enabledByDefault: true
@@ -2014,12 +2431,12 @@ sections:
         titleLabel: Title
         titleFormat: '{section.name|raw}'
         sortOrder: 1
+    propagationMethod: all
   69776f8a-078d-44a2-b94b-82bcb4826d54:
     name: 'Blog Catalog'
     handle: blogCatalog
     type: single
     enableVersioning: true
-    propagateEntries: true
     siteSettings:
       0f776df8-4195-4588-9f72-337d0aa2d29d:
         enabledByDefault: true
@@ -2039,12 +2456,12 @@ sections:
         titleLabel: Title
         titleFormat: '{section.name|raw}'
         sortOrder: 1
+    propagationMethod: all
   70da9b26-23ef-433e-8d6f-3c933e1e27ea:
     name: Catalog
     handle: catalog
     type: single
     enableVersioning: true
-    propagateEntries: true
     siteSettings:
       0f776df8-4195-4588-9f72-337d0aa2d29d:
         enabledByDefault: true
@@ -2064,12 +2481,12 @@ sections:
         titleLabel: Title
         titleFormat: '{section.name|raw}'
         sortOrder: 1
+    propagationMethod: all
   7d18cf11-db6a-475d-a432-61acfd1cb8ef:
     name: 'Job Aids'
     handle: jobAids
     type: channel
     enableVersioning: true
-    propagateEntries: true
     siteSettings:
       0f776df8-4195-4588-9f72-337d0aa2d29d:
         enabledByDefault: true
@@ -2089,12 +2506,12 @@ sections:
         titleLabel: Title
         titleFormat: ''
         sortOrder: 1
+    propagationMethod: all
   7e7523bc-1d74-450b-a41e-983d6af49437:
     name: 'Case Studies Catalog'
     handle: caseStudiesCatalog
     type: single
     enableVersioning: true
-    propagateEntries: true
     siteSettings:
       0f776df8-4195-4588-9f72-337d0aa2d29d:
         enabledByDefault: true
@@ -2114,12 +2531,12 @@ sections:
         titleLabel: Title
         titleFormat: '{section.name|raw}'
         sortOrder: 1
+    propagationMethod: all
   83431b6c-9465-4b37-94f7-ec92b745d156:
     name: Events
     handle: events
     type: channel
     enableVersioning: true
-    propagateEntries: true
     siteSettings:
       0f776df8-4195-4588-9f72-337d0aa2d29d:
         enabledByDefault: true
@@ -2139,12 +2556,12 @@ sections:
         titleLabel: Title
         titleFormat: ''
         sortOrder: 1
+    propagationMethod: all
   8567aaff-8831-477c-890c-c5e6d9a54304:
     name: 'Events Catalog'
     handle: eventsCatalog
     type: single
     enableVersioning: true
-    propagateEntries: true
     siteSettings:
       0f776df8-4195-4588-9f72-337d0aa2d29d:
         enabledByDefault: true
@@ -2164,12 +2581,12 @@ sections:
         titleLabel: Title
         titleFormat: '{section.name|raw}'
         sortOrder: 1
+    propagationMethod: all
   8847c619-9c8b-47f7-ad89-ca123031bc49:
     name: Podcasts
     handle: podcasts
     type: channel
     enableVersioning: true
-    propagateEntries: true
     siteSettings:
       0f776df8-4195-4588-9f72-337d0aa2d29d:
         enabledByDefault: true
@@ -2189,12 +2606,12 @@ sections:
         titleLabel: Title
         titleFormat: ''
         sortOrder: 1
+    propagationMethod: all
   900e88e8-05d0-483b-b5e0-af0792ed7827:
     name: Search
     handle: search
     type: single
     enableVersioning: true
-    propagateEntries: true
     siteSettings:
       0f776df8-4195-4588-9f72-337d0aa2d29d:
         enabledByDefault: true
@@ -2214,12 +2631,12 @@ sections:
         titleLabel: Title
         titleFormat: '{section.name|raw}'
         sortOrder: 1
+    propagationMethod: all
   c1cd9c0e-90dd-4a6f-b17a-0ff53f1c788d:
     name: Courses
     handle: courses
     type: channel
     enableVersioning: true
-    propagateEntries: true
     siteSettings:
       0f776df8-4195-4588-9f72-337d0aa2d29d:
         enabledByDefault: true
@@ -2290,12 +2707,12 @@ sections:
                   e21d4101-d1c0-45af-8148-8cfd36d8a83f:
                     required: false
                     sortOrder: 2
+    propagationMethod: all
   daaab5d4-552e-4204-be22-d59054b19982:
     name: 'Podcasts Catalog'
     handle: podcastsCatalog
     type: single
     enableVersioning: true
-    propagateEntries: true
     siteSettings:
       0f776df8-4195-4588-9f72-337d0aa2d29d:
         enabledByDefault: true
@@ -2315,12 +2732,12 @@ sections:
         titleLabel: Title
         titleFormat: '{section.name|raw}'
         sortOrder: 1
+    propagationMethod: all
   dd953deb-0d07-42be-b1b9-c70e63b9ac99:
     name: Pages
     handle: pages
     type: structure
     enableVersioning: true
-    propagateEntries: true
     siteSettings:
       0f776df8-4195-4588-9f72-337d0aa2d29d:
         enabledByDefault: true
@@ -2343,12 +2760,32 @@ sections:
         titleLabel: Title
         titleFormat: ''
         sortOrder: 1
+        fieldLayouts:
+          953a22a7-aa0e-4525-9281-703c98022e7c:
+            tabs:
+              -
+                name: Content
+                sortOrder: 1
+                fields:
+                  5bcddc82-216a-41f9-bd6c-471428939ea1:
+                    required: false
+                    sortOrder: 1
+              -
+                name: 'Page Settings'
+                sortOrder: 2
+                fields:
+                  67951067-d7e9-491d-bcf6-1fb42a4f08a2:
+                    required: false
+                    sortOrder: 2
+                  91a9d8ed-0a10-4377-bdc7-e7b1ea173ec6:
+                    required: false
+                    sortOrder: 1
+    propagationMethod: all
   df3a9ba1-4452-4dcf-b63a-9217ed7cc0d3:
     name: Videos
     handle: videos
     type: channel
     enableVersioning: true
-    propagateEntries: true
     siteSettings:
       0f776df8-4195-4588-9f72-337d0aa2d29d:
         enabledByDefault: true
@@ -2368,12 +2805,12 @@ sections:
         titleLabel: Title
         titleFormat: ''
         sortOrder: 1
+    propagationMethod: all
   e7d3d5a3-0dd9-4360-a44a-28b94b6cad53:
     name: 'Videos Catalog'
     handle: videosCatalog
     type: single
     enableVersioning: true
-    propagateEntries: true
     siteSettings:
       0f776df8-4195-4588-9f72-337d0aa2d29d:
         enabledByDefault: true
@@ -2393,12 +2830,12 @@ sections:
         titleLabel: Title
         titleFormat: '{section.name|raw}'
         sortOrder: 1
+    propagationMethod: all
   ea73fc09-e6e8-49ea-9020-a2ad12112348:
     name: 'Ebooks Catalog'
     handle: ebooksCatalog
     type: single
     enableVersioning: true
-    propagateEntries: true
     siteSettings:
       0f776df8-4195-4588-9f72-337d0aa2d29d:
         enabledByDefault: true
@@ -2418,12 +2855,12 @@ sections:
         titleLabel: Title
         titleFormat: '{section.name|raw}'
         sortOrder: 1
+    propagationMethod: all
   f69c982e-e793-4337-a3fb-a70c33eb7181:
     name: 'Courses Catalog'
     handle: coursesCatalog
     type: single
     enableVersioning: true
-    propagateEntries: true
     siteSettings:
       0f776df8-4195-4588-9f72-337d0aa2d29d:
         enabledByDefault: true
@@ -2443,12 +2880,12 @@ sections:
         titleLabel: Title
         titleFormat: '{section.name|raw}'
         sortOrder: 1
+    propagationMethod: all
   fc556283-8539-4dd1-aac3-fd2a719db71c:
     name: Home
     handle: home
     type: single
     enableVersioning: true
-    propagateEntries: true
     siteSettings:
       0f776df8-4195-4588-9f72-337d0aa2d29d:
         enabledByDefault: true
@@ -2489,6 +2926,7 @@ sections:
                   91a9d8ed-0a10-4377-bdc7-e7b1ea173ec6:
                     required: false
                     sortOrder: 1
+    propagationMethod: all
 siteGroups:
   e0ab7182-1f37-4bbf-a439-fb4c5dde24a5:
     name: NGLXP
@@ -2521,6 +2959,117 @@ sites:
     siteGroup: e0ab7182-1f37-4bbf-a439-fb4c5dde24a5
     sortOrder: 1
 superTableBlockTypes:
+  395c2562-7200-4a30-b06c-977a33d0eeaf:
+    field: 79e7eaf5-93b0-4f69-9437-ceb83bb68698
+    fields:
+      8cf1012a-cbd5-4f12-8a06-79fa93c0f571:
+        name: 'Carousel Image'
+        handle: carouselImage
+        instructions: 'Select the carousel item image.'
+        searchable: false
+        translationMethod: site
+        translationKeyFormat: null
+        type: craft\fields\Assets
+        settings:
+          useSingleFolder: ''
+          defaultUploadLocationSource: 'volume:70882b50-e193-4dc5-a44b-6069d91d66ff'
+          defaultUploadLocationSubpath: ''
+          singleUploadLocationSource: 'volume:70882b50-e193-4dc5-a44b-6069d91d66ff'
+          singleUploadLocationSubpath: ''
+          restrictFiles: ''
+          allowedKinds: null
+          sources: '*'
+          source: null
+          targetSiteId: null
+          viewMode: large
+          limit: '1'
+          selectionLabel: ''
+          localizeRelations: ''
+          validateRelatedElements: ''
+        contentColumnType: string
+        fieldGroup: null
+      8e699d72-c176-46a6-8f67-0a2a0d355578:
+        name: 'Carousel Link'
+        handle: carouselLink
+        instructions: 'Set the carousel item link.'
+        searchable: false
+        translationMethod: language
+        translationKeyFormat: null
+        type: fruitstudios\linkit\fields\LinkitField
+        settings:
+          selectLinkText: ''
+          types:
+            fruitstudios\linkit\models\Email:
+              enabled: '1'
+              customLabel: ''
+              customPlaceholder: ''
+            fruitstudios\linkit\models\Phone:
+              enabled: '1'
+              customLabel: ''
+              customPlaceholder: ''
+            fruitstudios\linkit\models\Url:
+              enabled: '1'
+              customLabel: ''
+              customPlaceholder: ''
+              allowAlias: '1'
+              allowMailto: '1'
+              allowHash: '1'
+              allowPaths: '1'
+            fruitstudios\linkit\models\Twitter:
+              enabled: ''
+              customLabel: ''
+              customPlaceholder: ''
+            fruitstudios\linkit\models\Facebook:
+              enabled: ''
+              customLabel: ''
+              customPlaceholder: ''
+            fruitstudios\linkit\models\Instagram:
+              enabled: ''
+              customLabel: ''
+              customPlaceholder: ''
+            fruitstudios\linkit\models\LinkedIn:
+              enabled: ''
+              customLabel: ''
+              customPlaceholder: ''
+            fruitstudios\linkit\models\Entry:
+              enabled: '1'
+              customLabel: ''
+              sources: '*'
+              customSelectionLabel: ''
+            fruitstudios\linkit\models\Category:
+              enabled: '1'
+              customLabel: ''
+              sources: '*'
+              customSelectionLabel: ''
+            fruitstudios\linkit\models\Asset:
+              enabled: '1'
+              customLabel: ''
+              sources: '*'
+              customSelectionLabel: ''
+            fruitstudios\linkit\models\User:
+              enabled: ''
+              customLabel: ''
+              sources: '*'
+              customSelectionLabel: ''
+              userPath: ''
+          allowCustomText: '1'
+          defaultText: ''
+          allowTarget: '1'
+        contentColumnType: text
+        fieldGroup: null
+    fieldLayouts:
+      be814dde-400c-4f65-b5e2-01be584112b4:
+        tabs:
+          -
+            name: Content
+            sortOrder: 1
+            fields:
+              8cf1012a-cbd5-4f12-8a06-79fa93c0f571:
+                required: true
+                sortOrder: 1
+              8e699d72-c176-46a6-8f67-0a2a0d355578:
+                required: false
+                sortOrder: 2
   db365edc-003d-4857-8d58-deb0de5e5caa:
     field: 5d17f8d2-9512-462c-b1ff-c603b102c66b
     fields:
@@ -2607,7 +3156,7 @@ system:
   edition: pro
   name: NGLXP
   live: true
-  schemaVersion: 3.1.28
+  schemaVersion: 3.2.15
   timeZone: America/New_York
 users:
   requireEmailVerification: true
@@ -2799,6 +3348,7 @@ users:
         - 'createfoldersinvolume:70882b50-e193-4dc5-a44b-6069d91d66ff'
         - 'deletefilesandfoldersinvolume:70882b50-e193-4dc5-a44b-6069d91d66ff'
         - 'viewvolume:70882b50-e193-4dc5-a44b-6069d91d66ff'
+        - 'editimagesinvolume:70882b50-e193-4dc5-a44b-6069d91d66ff'
     2dde8964-9a4d-4aa6-b6a4-99a78565549c:
       name: Editors
       handle: editors
