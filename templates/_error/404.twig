@@ -1,1 +1,12 @@
-<h1>Error 404 Template</h1>
+{% extends '_layout/default' %}
+
+{% block page %}
+    {% include '_shared/header' %}
+    <main property="mainContentOfPage">
+
+        <h1>Error 404</h1>
+
+        {% include '_shared/pagedetails' %}
+    </main>
+    {% include '_shared/footer' %}
+{% endblock %}

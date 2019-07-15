@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "13664107d0878d0378e69094f5f2d8ab",
+    "content-hash": "d207dead06eb98e30dc50781114420e7",
     "packages": [
         {
             "name": "aelvan/imager",
@@ -72,11 +72,11 @@
         },
         {
             "name": "anubarak/craft-relabel",
-            "version": "1.3.1",
+            "version": "1.3.2.2",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Anubarak/craft-relabel/zipball/82a826ad43e47f31beb704c1549c473c4bcc7324",
-                "reference": "82a826ad43e47f31beb704c1549c473c4bcc7324",
+                "url": "https://api.github.com/repos/Anubarak/craft-relabel/zipball/6e5fe51836d218e66b616e2535b3e470328f87e7",
+                "reference": "6e5fe51836d218e66b616e2535b3e470328f87e7",
                 "shasum": ""
             },
             "require": {
@@ -112,7 +112,7 @@
                 "craftcms",
                 "relabel"
             ],
-            "time": "2019-05-16T08:36:29+00:00"
+            "time": "2019-07-12T06:22:49+00:00"
         },
         {
             "name": "aws/aws-sdk-php",
@@ -179,11 +179,11 @@
         },
         {
             "name": "cakephp/core",
-            "version": "3.7.7",
+            "version": "3.8.1",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cakephp/core/zipball/f9d9823439e3c82fdb3f69d2c9210bab67e721af",
-                "reference": "f9d9823439e3c82fdb3f69d2c9210bab67e721af",
+                "url": "https://api.github.com/repos/cakephp/core/zipball/4f9762ce1cdfbe153c676cf3ae1e2d62ac328301",
+                "reference": "4f9762ce1cdfbe153c676cf3ae1e2d62ac328301",
                 "shasum": ""
             },
             "require": {
@@ -219,11 +219,11 @@
                 "core",
                 "framework"
             ],
-            "time": "2019-04-15T14:21:39+00:00"
+            "time": "2019-05-22T01:06:42+00:00"
         },
         {
             "name": "cakephp/utility",
-            "version": "3.7.7",
+            "version": "3.8.1",
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/cakephp/utility/zipball/329654495c4cf966ac75832e502ec939542928fb",
@@ -560,17 +560,17 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "3.1.32.1",
+            "version": "3.2.2",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/111ac9fd28ce0995d1978e314ee4de91b96e7786",
-                "reference": "111ac9fd28ce0995d1978e314ee4de91b96e7786",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/d8145c14be484ed81aa10207f610232cba8d3866",
+                "reference": "d8145c14be484ed81aa10207f610232cba8d3866",
                 "shasum": ""
             },
             "require": {
                 "composer/composer": "1.6.3",
                 "craftcms/oauth2-craftid": "~1.0.0",
-                "craftcms/plugin-installer": "~1.5.0",
+                "craftcms/plugin-installer": "~1.5.3",
                 "craftcms/server-check": "~1.1.0",
                 "creocoder/yii2-nested-sets": "~0.9.0",
                 "danielstjules/stringy": "^3.1.0",
@@ -640,15 +640,15 @@
                 "docs": "https://docs.craftcms.com/v3/",
                 "rss": "https://github.com/craftcms/cms/releases.atom"
             },
-            "time": "2019-06-25T21:24:57+00:00"
+            "time": "2019-07-14T18:34:11+00:00"
         },
         {
             "name": "craftcms/feed-me",
-            "version": "4.1.0",
+            "version": "4.1.1",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/feed-me/zipball/0bc3e83f81b20813bc5806becd496d79b61b636a",
-                "reference": "0bc3e83f81b20813bc5806becd496d79b61b636a",
+                "url": "https://api.github.com/repos/craftcms/feed-me/zipball/af0d4ebe8b43c0d33e05f9bec1364e1531488795",
+                "reference": "af0d4ebe8b43c0d33e05f9bec1364e1531488795",
                 "shasum": ""
             },
             "require": {
@@ -702,7 +702,7 @@
                 "docs": "https://docs.craftcms.com/feed-me/v4/",
                 "rss": "https://github.com/craftcms/feed-me/commits/master.atom"
             },
-            "time": "2019-04-24T21:38:35+00:00"
+            "time": "2019-07-06T14:14:12+00:00"
         },
         {
             "name": "craftcms/oauth2-craftid",
@@ -1916,28 +1916,28 @@
         },
         {
             "name": "guzzlehttp/psr7",
-            "version": "1.5.2",
+            "version": "1.6.1",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/psr7/zipball/9f83dded91781a01c63574e387eaa769be769115",
-                "reference": "9f83dded91781a01c63574e387eaa769be769115",
+                "url": "https://api.github.com/repos/guzzle/psr7/zipball/239400de7a173fe9901b9ac7c06497751f00727a",
+                "reference": "239400de7a173fe9901b9ac7c06497751f00727a",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.4.0",
                 "psr/http-message": "~1.0",
-                "ralouphie/getallheaders": "^2.0.5"
+                "ralouphie/getallheaders": "^2.0.5 || ^3.0.0"
             },
             "provide": {
                 "psr/http-message-implementation": "1.0"
             },
-            "require-dev": {
-                "phpunit/phpunit": "~4.8.36 || ^5.7.27 || ^6.5.8"
+            "suggest": {
+                "zendframework/zend-httphandlerrunner": "Emit PSR-7 responses"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.5-dev"
+                    "dev-master": "1.6-dev"
                 }
             },
             "autoload": {
@@ -1948,7 +1948,6 @@
                     "src/functions_include.php"
                 ]
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -1974,7 +1973,7 @@
                 "uri",
                 "url"
             ],
-            "time": "2018-12-04T20:46:45+00:00"
+            "time": "2019-07-01T23:21:34+00:00"
         },
         {
             "name": "icanboogie/inflector",
@@ -2370,6 +2369,40 @@
                 "thief"
             ],
             "time": "2018-10-27T18:57:38+00:00"
+        },
+        {
+            "name": "kylekatarnls/update-helper",
+            "version": "1.1.1",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/kylekatarnls/update-helper/zipball/b34a46d7f5ec1795b4a15ac9d46b884377262df9",
+                "reference": "b34a46d7f5ec1795b4a15ac9d46b884377262df9",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^1.1.0",
+                "php": ">=5.3.0"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": "UpdateHelper\\ComposerPlugin"
+            },
+            "autoload": {
+                "psr-0": {
+                    "UpdateHelper\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Kyle",
+                    "email": "kylekatarnls@gmail.com"
+                }
+            ],
+            "description": "Update helper",
+            "time": "2019-06-05T08:34:23+00:00"
         },
         {
             "name": "larapack/dd",
@@ -3005,23 +3038,24 @@
         },
         {
             "name": "nesbot/carbon",
-            "version": "1.36.2",
+            "version": "1.39.0",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/cd324b98bc30290f233dd0e75e6ce49f7ab2a6c9",
-                "reference": "cd324b98bc30290f233dd0e75e6ce49f7ab2a6c9",
+                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/dd62a58af4e0775a45ea5f99d0363d81b7d9a1e0",
+                "reference": "dd62a58af4e0775a45ea5f99d0363d81b7d9a1e0",
                 "shasum": ""
             },
             "require": {
+                "kylekatarnls/update-helper": "^1.1",
                 "php": ">=5.3.9",
                 "symfony/translation": "~2.6 || ~3.0 || ~4.0"
             },
-            "suggest": {
-                "friendsofphp/php-cs-fixer": "Needed for the `composer phpcs` command. Allow to automatically fix code style.",
-                "phpstan/phpstan": "Needed for the `composer phpstan` command. Allow to detect potential errors."
-            },
+            "bin": [
+                "bin/upgrade-carbon"
+            ],
             "type": "library",
             "extra": {
+                "update-helper": "Carbon\\Upgrade",
                 "laravel": {
                     "providers": [
                         "Carbon\\Laravel\\ServiceProvider"
@@ -3050,7 +3084,7 @@
                 "datetime",
                 "time"
             ],
-            "time": "2018-12-28T10:07:33+00:00"
+            "time": "2019-06-11T09:07:59+00:00"
         },
         {
             "name": "nystudio107/craft-emptycoalesce",
@@ -3470,19 +3504,15 @@
         },
         {
             "name": "ralouphie/getallheaders",
-            "version": "2.0.5",
+            "version": "3.0.3",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ralouphie/getallheaders/zipball/5601c8a83fbba7ef674a7369456d12f1e0d0eafa",
-                "reference": "5601c8a83fbba7ef674a7369456d12f1e0d0eafa",
+                "url": "https://api.github.com/repos/ralouphie/getallheaders/zipball/120b605dfeb996808c31b6477290a714d356e822",
+                "reference": "120b605dfeb996808c31b6477290a714d356e822",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "~3.7.0",
-                "satooshi/php-coveralls": ">=1.0"
+                "php": ">=5.6"
             },
             "type": "library",
             "autoload": {
@@ -3490,7 +3520,6 @@
                     "src/getallheaders.php"
                 ]
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -3501,7 +3530,7 @@
                 }
             ],
             "description": "A polyfill for getallheaders.",
-            "time": "2016-02-11T07:05:27+00:00"
+            "time": "2019-03-08T08:55:37+00:00"
         },
         {
             "name": "ralouphie/mimey",
@@ -5055,15 +5084,15 @@
         },
         {
             "name": "verbb/super-table",
-            "version": "2.1.20",
+            "version": "2.2.1",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/verbb/super-table/zipball/5be146e3f741f9e52145cf773cba2753214e6d36",
-                "reference": "5be146e3f741f9e52145cf773cba2753214e6d36",
+                "url": "https://api.github.com/repos/verbb/super-table/zipball/64376fd147dbced22c457561fc4bd034074a1ead",
+                "reference": "64376fd147dbced22c457561fc4bd034074a1ead",
                 "shasum": ""
             },
             "require": {
-                "craftcms/cms": "^3.1.20"
+                "craftcms/cms": "^3.2.0"
             },
             "type": "craft-plugin",
             "extra": {
@@ -5103,7 +5132,7 @@
                 "docs": "https://github.com/verbb/super-table",
                 "rss": "https://github.com/verbb/super-table/commits/v2.atom"
             },
-            "time": "2019-05-21T10:42:31+00:00"
+            "time": "2019-07-14T12:17:02+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
