@@ -189,7 +189,7 @@ categoryGroups:
         hasUrls: false
         uriFormat: null
         template: null
-dateModified: 1563164424
+dateModified: 1564342614
 email:
   fromEmail: $SYSTEM_EMAIL_ADDRESS
   fromName: $SYSTEM_EMAIL_SENDER_NAME
@@ -541,6 +541,65 @@ fields:
       allowTarget: '1'
     contentColumnType: text
     fieldGroup: e4089825-4346-4eed-813e-d1032e323d05
+  1d181687-476a-49c1-b768-57b486226289:
+    name: Quote
+    handle: quote
+    instructions: 'Add the quote content.'
+    searchable: true
+    translationMethod: language
+    translationKeyFormat: null
+    type: craft\fields\PlainText
+    settings:
+      placeholder: ''
+      code: ''
+      multiline: ''
+      initialRows: '4'
+      charLimit: ''
+      columnType: text
+    contentColumnType: text
+    fieldGroup: e4089825-4346-4eed-813e-d1032e323d05
+  1d2d6296-e55f-4ebe-9252-645c4cab9228:
+    name: 'Gallery Items'
+    handle: galleryItems
+    instructions: 'Add images to the gallery.'
+    searchable: true
+    translationMethod: site
+    translationKeyFormat: null
+    type: verbb\supertable\fields\SuperTableField
+    settings:
+      minRows: ''
+      maxRows: ''
+      contentTable: '{{%stc_galleryitems}}'
+      propagationMethod: all
+      staticField: ''
+      columns:
+        62:
+          width: ''
+      fieldLayout: row
+      selectionLabel: ''
+    contentColumnType: string
+    fieldGroup: e4089825-4346-4eed-813e-d1032e323d05
+  1dede88b-8853-4a2e-be64-965161d06fdb:
+    name: 'Panel Footer'
+    handle: panelFooter
+    instructions: 'Add content to the panel footer.'
+    searchable: true
+    translationMethod: language
+    translationKeyFormat: null
+    type: craft\redactor\Field
+    settings:
+      redactorConfig: Simple.json
+      purifierConfig: ''
+      cleanupHtml: true
+      removeInlineStyles: '1'
+      removeEmptyTags: '1'
+      removeNbsp: '1'
+      purifyHtml: '1'
+      columnType: text
+      availableVolumes: ''
+      availableTransforms: '*'
+    contentColumnType: text
+    fieldGroup: e4089825-4346-4eed-813e-d1032e323d05
   27187c43-5082-4185-b805-5e3e3be34d57:
     name: Text
     handle: text
@@ -557,6 +616,29 @@ fields:
       charLimit: ''
       columnType: text
     contentColumnType: text
+    fieldGroup: e4089825-4346-4eed-813e-d1032e323d05
+  2ee388cf-3aa8-4379-b3cf-c1e24b0f699b:
+    name: 'Accordion Items'
+    handle: accordionItems
+    instructions: 'Add accordion items.'
+    searchable: true
+    translationMethod: site
+    translationKeyFormat: null
+    type: verbb\supertable\fields\SuperTableField
+    settings:
+      minRows: ''
+      maxRows: ''
+      contentTable: '{{%stc_accordionitems}}'
+      propagationMethod: all
+      staticField: ''
+      columns:
+        66:
+          width: ''
+        65:
+          width: ''
+      fieldLayout: row
+      selectionLabel: ''
+    contentColumnType: string
     fieldGroup: e4089825-4346-4eed-813e-d1032e323d05
   30daa2fc-da41-475f-ae5e-57b9baba167c:
     name: Alignment
@@ -649,6 +731,24 @@ fields:
           default: ''
     contentColumnType: string
     fieldGroup: e4089825-4346-4eed-813e-d1032e323d05
+  4ca82a9d-02e8-4639-8f63-56d678157748:
+    name: 'Tab Items'
+    handle: tabItems
+    instructions: 'Add tab items.'
+    searchable: true
+    translationMethod: site
+    translationKeyFormat: null
+    type: verbb\supertable\fields\SuperTableField
+    settings:
+      minRows: ''
+      maxRows: ''
+      contentTable: '{{%stc_tabitems}}'
+      propagationMethod: all
+      staticField: ''
+      fieldLayout: row
+      selectionLabel: ''
+    contentColumnType: string
+    fieldGroup: e4089825-4346-4eed-813e-d1032e323d05
   4d18f30f-60ec-4c6b-bb36-e6adaed44df2:
     name: 'Enable Lightbox'
     handle: enableLightbox
@@ -714,6 +814,23 @@ fields:
       columnType: text
     contentColumnType: text
     fieldGroup: e4089825-4346-4eed-813e-d1032e323d05
+  532cbe86-3beb-4734-ad0f-03d3594bdf8d:
+    name: 'Panel Title'
+    handle: panelTitle
+    instructions: 'Add the panel title.'
+    searchable: true
+    translationMethod: language
+    translationKeyFormat: null
+    type: craft\fields\PlainText
+    settings:
+      placeholder: ''
+      code: ''
+      multiline: ''
+      initialRows: '4'
+      charLimit: ''
+      columnType: text
+    contentColumnType: text
+    fieldGroup: e4089825-4346-4eed-813e-d1032e323d05
   55d4ff60-80ba-422e-a806-e730afdd6ed3:
     name: 'Rich Text'
     handle: richText
@@ -733,6 +850,23 @@ fields:
       columnType: text
       availableVolumes: ''
       availableTransforms: '*'
+    contentColumnType: text
+    fieldGroup: e4089825-4346-4eed-813e-d1032e323d05
+  57325dc3-624e-4c7e-9d71-628a34a0a8ac:
+    name: 'Quote Source Name'
+    handle: quoteSourceName
+    instructions: 'Add the name of the cited source content.'
+    searchable: true
+    translationMethod: language
+    translationKeyFormat: null
+    type: craft\fields\PlainText
+    settings:
+      placeholder: ''
+      code: ''
+      multiline: ''
+      initialRows: '4'
+      charLimit: ''
+      columnType: text
     contentColumnType: text
     fieldGroup: e4089825-4346-4eed-813e-d1032e323d05
   5bcddc82-216a-41f9-bd6c-471428939ea1:
@@ -908,6 +1042,43 @@ fields:
       columnType: text
     contentColumnType: text
     fieldGroup: aae3acdb-e54a-47cb-ba69-ca6500f39405
+  69cd962e-eda4-4b01-a36f-7c6ba51d2b60:
+    name: 'Panel Type'
+    handle: panelType
+    instructions: 'Select a panel type.'
+    searchable: true
+    translationMethod: none
+    translationKeyFormat: null
+    type: craft\fields\Dropdown
+    settings:
+      optgroups: true
+      options:
+        -
+          label: Default
+          value: panel-default
+          default: '1'
+        -
+          label: Primary
+          value: panel-primary
+          default: ''
+        -
+          label: Success
+          value: panel-success
+          default: ''
+        -
+          label: Info
+          value: panel-info
+          default: ''
+        -
+          label: Warning
+          value: panel-warning
+          default: ''
+        -
+          label: Danger
+          value: panel-danger
+          default: ''
+    contentColumnType: string
+    fieldGroup: e4089825-4346-4eed-813e-d1032e323d05
   6c0db7b2-699b-4807-bf08-092abd76398b:
     name: Communities
     handle: communities
@@ -1210,6 +1381,23 @@ fields:
       localizeRelations: ''
     contentColumnType: string
     fieldGroup: 996d0575-c87f-4fa8-a027-535c0523a9a4
+  b3d802b6-c78b-4b10-a0ab-13db037111e6:
+    name: 'Quote Author Name'
+    handle: quoteAuthorName
+    instructions: 'Add the quote author''s name.'
+    searchable: true
+    translationMethod: none
+    translationKeyFormat: null
+    type: craft\fields\PlainText
+    settings:
+      placeholder: ''
+      code: ''
+      multiline: ''
+      initialRows: '4'
+      charLimit: ''
+      columnType: text
+    contentColumnType: text
+    fieldGroup: e4089825-4346-4eed-813e-d1032e323d05
   c4b752da-d488-479a-ab58-648146b8b804:
     name: 'Custom ID'
     handle: customId
@@ -1291,6 +1479,27 @@ fields:
     settings:
       default: ''
     contentColumnType: boolean
+    fieldGroup: e4089825-4346-4eed-813e-d1032e323d05
+  d546ade7-7bb3-4a49-bb7e-f4da80879227:
+    name: 'Panel Content'
+    handle: panelContent
+    instructions: 'Add the panel content.'
+    searchable: true
+    translationMethod: language
+    translationKeyFormat: null
+    type: craft\redactor\Field
+    settings:
+      redactorConfig: Standard.json
+      purifierConfig: ''
+      cleanupHtml: true
+      removeInlineStyles: '1'
+      removeEmptyTags: '1'
+      removeNbsp: '1'
+      purifyHtml: '1'
+      columnType: text
+      availableVolumes: '*'
+      availableTransforms: '*'
+    contentColumnType: text
     fieldGroup: e4089825-4346-4eed-813e-d1032e323d05
   d6c10f33-7140-4969-ace1-bad77eedd52e:
     name: 'Heading Size'
@@ -1690,19 +1899,19 @@ fields:
     contentColumnType: text
     fieldGroup: aae3acdb-e54a-47cb-ba69-ca6500f39405
 neoBlockTypeGroups:
-  5f19f018-f137-4b75-b5f5-f8339f3ed57c:
-    field: 5bcddc82-216a-41f9-bd6c-471428939ea1
-    name: 'Text Blocks'
-    sortOrder: 3
-  a02c980e-db26-4aa0-9810-eff6d0537ed9:
-    field: 5bcddc82-216a-41f9-bd6c-471428939ea1
-    name: 'Advanced Blocks'
-    sortOrder: 13
-  c38c48bc-6cda-41c6-b931-0539a9f590ad:
+  201d592e-3d90-47a5-94b9-9c006a7732ea:
     field: 5bcddc82-216a-41f9-bd6c-471428939ea1
     name: 'Media Blocks'
     sortOrder: 8
-  c5c5fe52-864c-4282-954d-611cbff9a716:
+  3b4bbeb8-dbaa-43dd-a639-77255f43220e:
+    field: 5bcddc82-216a-41f9-bd6c-471428939ea1
+    name: 'Text Blocks'
+    sortOrder: 3
+  527201a3-dc21-4ab9-adaf-efe92f04208a:
+    field: 5bcddc82-216a-41f9-bd6c-471428939ea1
+    name: 'Advanced Blocks'
+    sortOrder: 13
+  d700675a-e3dc-4fba-8ffe-4d5d0c70eb58:
     field: 5bcddc82-216a-41f9-bd6c-471428939ea1
     name: 'Premade Blocks'
     sortOrder: 21
@@ -1726,7 +1935,7 @@ neoBlockTypes:
     childBlocks: ''
     topLevel: false
     fieldLayouts:
-      cdf2b69a-7d3e-4c15-a8f0-67dceea44b7a:
+      3064632d-d7d4-4b4e-b6f0-591886c9d842:
         tabs:
           -
             name: Content
@@ -1776,9 +1985,9 @@ neoBlockTypes:
       - mediaPlayer
       - carousel
       - gallery
+      - accordion
       - alert
       - button
-      - accordion
       - imageBox
       - linkList
       - panel
@@ -1789,7 +1998,7 @@ neoBlockTypes:
       - socialShare
     topLevel: false
     fieldLayouts:
-      e6c41348-efb6-475f-b991-feaccd56c36b:
+      63bb3315-fe81-47df-a055-f567c2c85108:
         tabs:
           -
             name: Content
@@ -1820,7 +2029,7 @@ neoBlockTypes:
     childBlocks: ''
     topLevel: false
     fieldLayouts:
-      530ff929-c9cd-4a51-b647-a7fb13c16664:
+      694f7391-b012-4067-ac2a-077eb6a7fb7b:
         tabs:
           -
             name: Content
@@ -1830,7 +2039,7 @@ neoBlockTypes:
                 required: false
                 sortOrder: 2
               73edc314-438f-4b80-a0f1-e2f675dd791d:
-                required: false
+                required: true
                 sortOrder: 1
           -
             name: Settings
@@ -1842,6 +2051,12 @@ neoBlockTypes:
               4d18f30f-60ec-4c6b-bb36-e6adaed44df2:
                 required: false
                 sortOrder: 3
+              c4b752da-d488-479a-ab58-648146b8b804:
+                required: false
+                sortOrder: 4
+              d99f24f5-652e-49ee-87f4-18d022b69504:
+                required: false
+                sortOrder: 5
               dac8c695-e8ec-4fec-97d5-ba86708962b8:
                 required: false
                 sortOrder: 1
@@ -1856,7 +2071,7 @@ neoBlockTypes:
       - col
     topLevel: true
     fieldLayouts:
-      54e36304-d1e7-401c-9d26-cf1010997faa:
+      0bd0e982-8e5b-4bb4-aa8a-88cdcab174f3:
         tabs:
           -
             name: Content
@@ -1887,14 +2102,14 @@ neoBlockTypes:
     childBlocks: ''
     topLevel: false
     fieldLayouts:
-      57bc4b11-447b-4431-9696-71af413017aa:
+      d1118e8c-4368-4d0c-a218-02e3ecf4f5b9:
         tabs:
           -
             name: Content
             sortOrder: 1
             fields:
               5d17f8d2-9512-462c-b1ff-c603b102c66b:
-                required: false
+                required: true
                 sortOrder: 1
           -
             name: Settings
@@ -1915,6 +2130,26 @@ neoBlockTypes:
     maxChildBlocks: 0
     childBlocks: ''
     topLevel: false
+    fieldLayouts:
+      3c16c050-a831-4022-9e30-5f6cf43ecf31:
+        tabs:
+          -
+            name: Content
+            sortOrder: 1
+            fields:
+              4ca82a9d-02e8-4639-8f63-56d678157748:
+                required: true
+                sortOrder: 1
+          -
+            name: Settings
+            sortOrder: 2
+            fields:
+              c4b752da-d488-479a-ab58-648146b8b804:
+                required: false
+                sortOrder: 1
+              d99f24f5-652e-49ee-87f4-18d022b69504:
+                required: false
+                sortOrder: 2
   5bdf6392-a25a-44d3-a3c7-e5e0d5075156:
     field: 5bcddc82-216a-41f9-bd6c-471428939ea1
     name: Divider
@@ -1925,7 +2160,7 @@ neoBlockTypes:
     childBlocks: ''
     topLevel: false
     fieldLayouts:
-      3a671b7a-d36a-41ff-b39f-7de143d88dc5:
+      814526c4-6006-4065-9d20-6fc2955bc131:
         tabs:
           -
             name: Settings
@@ -1941,13 +2176,13 @@ neoBlockTypes:
     field: 5bcddc82-216a-41f9-bd6c-471428939ea1
     name: Button
     handle: button
-    sortOrder: 15
+    sortOrder: 16
     maxBlocks: 0
     maxChildBlocks: 0
     childBlocks: ''
     topLevel: false
     fieldLayouts:
-      7cb9a113-ff9a-4840-8864-044cbf8ff852:
+      df4a069a-c9ca-4faf-bc07-4cf8ef1f7c7a:
         tabs:
           -
             name: Content
@@ -1984,6 +2219,35 @@ neoBlockTypes:
     maxChildBlocks: 0
     childBlocks: ''
     topLevel: false
+    fieldLayouts:
+      a48893c2-4a59-4390-ab1e-bee3299e03bc:
+        tabs:
+          -
+            name: Content
+            sortOrder: 1
+            fields:
+              1dede88b-8853-4a2e-be64-965161d06fdb:
+                required: false
+                sortOrder: 3
+              532cbe86-3beb-4734-ad0f-03d3594bdf8d:
+                required: false
+                sortOrder: 1
+              d546ade7-7bb3-4a49-bb7e-f4da80879227:
+                required: true
+                sortOrder: 2
+          -
+            name: Settings
+            sortOrder: 2
+            fields:
+              69cd962e-eda4-4b01-a36f-7c6ba51d2b60:
+                required: false
+                sortOrder: 1
+              c4b752da-d488-479a-ab58-648146b8b804:
+                required: false
+                sortOrder: 2
+              d99f24f5-652e-49ee-87f4-18d022b69504:
+                required: false
+                sortOrder: 3
   73727c41-c247-4503-b7a1-e5ac626a74da:
     field: 5bcddc82-216a-41f9-bd6c-471428939ea1
     name: Banner
@@ -1994,14 +2258,14 @@ neoBlockTypes:
     childBlocks: ''
     topLevel: false
     fieldLayouts:
-      cc517bd2-5d4e-48d1-b2f0-f6b5142e1e2f:
+      10cee711-7700-44cd-a03a-c36e7fe3fe63:
         tabs:
           -
             name: Content
             sortOrder: 1
             fields:
               9f17c2c6-08d3-42a6-9aec-f26ab8e774ac:
-                required: false
+                required: true
                 sortOrder: 1
           -
             name: Settings
@@ -2023,7 +2287,7 @@ neoBlockTypes:
     childBlocks: ''
     topLevel: false
     fieldLayouts:
-      ea72cecf-afa1-47c7-a481-f64094a7b7c4:
+      f8af465b-0a47-494c-991b-9b4154783771:
         tabs:
           -
             name: Content
@@ -2051,15 +2315,55 @@ neoBlockTypes:
     maxChildBlocks: 0
     childBlocks: ''
     topLevel: false
+    fieldLayouts:
+      743575f2-ed55-41be-9967-4642241605fd:
+        tabs:
+          -
+            name: Content
+            sortOrder: 1
+            fields:
+              1d2d6296-e55f-4ebe-9252-645c4cab9228:
+                required: true
+                sortOrder: 1
+          -
+            name: Settings
+            sortOrder: 2
+            fields:
+              c4b752da-d488-479a-ab58-648146b8b804:
+                required: false
+                sortOrder: 1
+              d99f24f5-652e-49ee-87f4-18d022b69504:
+                required: false
+                sortOrder: 2
   a30037f3-08e0-44fb-bdbb-c3ee7bc134c2:
     field: 5bcddc82-216a-41f9-bd6c-471428939ea1
-    name: Collapsibles
+    name: Accordion
     handle: accordion
-    sortOrder: 16
+    sortOrder: 14
     maxBlocks: 0
     maxChildBlocks: 0
     childBlocks: ''
     topLevel: false
+    fieldLayouts:
+      811d8d27-9ad1-4fb6-b4b8-8d3cf7ea113b:
+        tabs:
+          -
+            name: Content
+            sortOrder: 1
+            fields:
+              2ee388cf-3aa8-4379-b3cf-c1e24b0f699b:
+                required: true
+                sortOrder: 1
+          -
+            name: Settings
+            sortOrder: 2
+            fields:
+              c4b752da-d488-479a-ab58-648146b8b804:
+                required: false
+                sortOrder: 1
+              d99f24f5-652e-49ee-87f4-18d022b69504:
+                required: false
+                sortOrder: 2
   a645c040-e088-4a11-ace8-362c474df792:
     field: 5bcddc82-216a-41f9-bd6c-471428939ea1
     name: Quotation
@@ -2069,6 +2373,32 @@ neoBlockTypes:
     maxChildBlocks: 0
     childBlocks: ''
     topLevel: false
+    fieldLayouts:
+      042a0755-7be8-4d3b-ae7d-2877bee5601c:
+        tabs:
+          -
+            name: Content
+            sortOrder: 1
+            fields:
+              1d181687-476a-49c1-b768-57b486226289:
+                required: true
+                sortOrder: 1
+              57325dc3-624e-4c7e-9d71-628a34a0a8ac:
+                required: false
+                sortOrder: 3
+              b3d802b6-c78b-4b10-a0ab-13db037111e6:
+                required: false
+                sortOrder: 2
+          -
+            name: Settings
+            sortOrder: 2
+            fields:
+              c4b752da-d488-479a-ab58-648146b8b804:
+                required: false
+                sortOrder: 1
+              d99f24f5-652e-49ee-87f4-18d022b69504:
+                required: false
+                sortOrder: 2
   bb4d7cfd-61e7-4f04-b347-3e1c1bada52a:
     field: 5bcddc82-216a-41f9-bd6c-471428939ea1
     name: 'Image Box'
@@ -2079,7 +2409,7 @@ neoBlockTypes:
     childBlocks: ''
     topLevel: false
     fieldLayouts:
-      ee09fc4b-362d-4529-aab5-a3e55af98464:
+      9e2c0a5e-ae03-4411-a467-39ad5deceeaa:
         tabs:
           -
             name: Content
@@ -2129,7 +2459,7 @@ neoBlockTypes:
     childBlocks: ''
     topLevel: false
     fieldLayouts:
-      e9d05036-2bfb-4054-87ea-3b1bc588a660:
+      81392e35-238b-44d9-82db-c749361fddaf:
         tabs:
           -
             name: Content
@@ -2167,7 +2497,7 @@ neoBlockTypes:
     childBlocks: ''
     topLevel: false
     fieldLayouts:
-      15b5a2a0-301b-4156-b90b-970716fc18c6:
+      48f37767-fce8-4554-9323-9fc5a35bbc60:
         tabs:
           -
             name: Content
@@ -2205,20 +2535,20 @@ neoBlockTypes:
     field: 5bcddc82-216a-41f9-bd6c-471428939ea1
     name: Alert
     handle: alert
-    sortOrder: 14
+    sortOrder: 15
     maxBlocks: 0
     maxChildBlocks: 0
     childBlocks: ''
     topLevel: false
     fieldLayouts:
-      06845fa1-8e49-4b0f-81e0-26042850d8b2:
+      8d94aec4-2bb8-4a6f-abef-b1d3a3ebc2d3:
         tabs:
           -
             name: Content
             sortOrder: 1
             fields:
               55d4ff60-80ba-422e-a806-e730afdd6ed3:
-                required: false
+                required: true
                 sortOrder: 1
           -
             name: Settings
@@ -3070,6 +3400,174 @@ superTableBlockTypes:
               8e699d72-c176-46a6-8f67-0a2a0d355578:
                 required: false
                 sortOrder: 2
+  68c7ebc6-bca9-4736-ad01-098abcdc68bb:
+    field: 1d2d6296-e55f-4ebe-9252-645c4cab9228
+    fields:
+      52ea0a4c-93d2-4a8d-8262-5ee0dc7e4d5a:
+        name: Caption
+        handle: caption
+        instructions: 'Add the gallery item caption.'
+        searchable: false
+        translationMethod: language
+        translationKeyFormat: null
+        type: craft\fields\PlainText
+        settings:
+          placeholder: ''
+          code: ''
+          multiline: ''
+          initialRows: '4'
+          charLimit: ''
+          columnType: text
+        contentColumnType: text
+        fieldGroup: null
+      88fe9e9c-a901-4590-9fe6-83fb64180d66:
+        name: Image
+        handle: image
+        instructions: 'Add the gallery item image.'
+        searchable: false
+        translationMethod: site
+        translationKeyFormat: null
+        type: craft\fields\Assets
+        settings:
+          useSingleFolder: ''
+          defaultUploadLocationSource: 'volume:70882b50-e193-4dc5-a44b-6069d91d66ff'
+          defaultUploadLocationSubpath: Content
+          singleUploadLocationSource: 'volume:70882b50-e193-4dc5-a44b-6069d91d66ff'
+          singleUploadLocationSubpath: ''
+          restrictFiles: '1'
+          allowedKinds:
+            - image
+          sources: '*'
+          source: null
+          targetSiteId: null
+          viewMode: list
+          limit: '1'
+          selectionLabel: ''
+          localizeRelations: ''
+          validateRelatedElements: ''
+        contentColumnType: string
+        fieldGroup: null
+    fieldLayouts:
+      3f039ed7-a328-45bd-8e18-0c150be27f17:
+        tabs:
+          -
+            name: Content
+            sortOrder: 1
+            fields:
+              52ea0a4c-93d2-4a8d-8262-5ee0dc7e4d5a:
+                required: false
+                sortOrder: 2
+              88fe9e9c-a901-4590-9fe6-83fb64180d66:
+                required: true
+                sortOrder: 1
+  704df56f-0ac5-4fd1-bfc8-c092ef194556:
+    field: 4ca82a9d-02e8-4639-8f63-56d678157748
+    fields:
+      35f540ad-373d-4548-b198-c473b2559cd9:
+        name: 'Tab Content'
+        handle: tabContent
+        instructions: 'Add the tab content.'
+        searchable: false
+        translationMethod: language
+        translationKeyFormat: null
+        type: craft\redactor\Field
+        settings:
+          redactorConfig: Standard.json
+          purifierConfig: ''
+          cleanupHtml: true
+          removeInlineStyles: '1'
+          removeEmptyTags: '1'
+          removeNbsp: '1'
+          purifyHtml: '1'
+          columnType: text
+          availableVolumes: '*'
+          availableTransforms: '*'
+        contentColumnType: text
+        fieldGroup: null
+      3d27bb08-1c49-41df-9ce9-498049096830:
+        name: 'Tab Title'
+        handle: tabTitle
+        instructions: 'Add a tab title.'
+        searchable: false
+        translationMethod: language
+        translationKeyFormat: null
+        type: craft\fields\PlainText
+        settings:
+          placeholder: ''
+          code: ''
+          multiline: ''
+          initialRows: '4'
+          charLimit: ''
+          columnType: text
+        contentColumnType: text
+        fieldGroup: null
+    fieldLayouts:
+      ab5db203-5694-42c6-8a53-8865a1ef4a29:
+        tabs:
+          -
+            name: Content
+            sortOrder: 1
+            fields:
+              35f540ad-373d-4548-b198-c473b2559cd9:
+                required: true
+                sortOrder: 2
+              3d27bb08-1c49-41df-9ce9-498049096830:
+                required: true
+                sortOrder: 1
+  9277e4c4-6dcc-47b2-9d10-1db7b639a75f:
+    field: 2ee388cf-3aa8-4379-b3cf-c1e24b0f699b
+    fields:
+      2477ed15-9b97-495b-b3f5-e9ed29e4710d:
+        name: 'Panel Content'
+        handle: panelContent
+        instructions: 'Add the accordion item content.'
+        searchable: false
+        translationMethod: language
+        translationKeyFormat: null
+        type: craft\redactor\Field
+        settings:
+          redactorConfig: Standard.json
+          purifierConfig: ''
+          cleanupHtml: true
+          removeInlineStyles: '1'
+          removeEmptyTags: '1'
+          removeNbsp: '1'
+          purifyHtml: '1'
+          columnType: text
+          availableVolumes: '*'
+          availableTransforms: '*'
+        contentColumnType: text
+        fieldGroup: null
+      f763183d-6df6-4307-8c1e-7334740e8127:
+        name: Summary
+        handle: summary
+        instructions: 'Add the accordion item summary.'
+        searchable: false
+        translationMethod: language
+        translationKeyFormat: null
+        type: craft\fields\PlainText
+        settings:
+          placeholder: ''
+          code: ''
+          multiline: ''
+          initialRows: '4'
+          charLimit: ''
+          columnType: text
+        contentColumnType: text
+        fieldGroup: null
+    fieldLayouts:
+      43372aa3-9175-433d-8302-75f665b6eac5:
+        tabs:
+          -
+            name: Content
+            sortOrder: 1
+            fields:
+              2477ed15-9b97-495b-b3f5-e9ed29e4710d:
+                required: true
+                sortOrder: 2
+              f763183d-6df6-4307-8c1e-7334740e8127:
+                required: true
+                sortOrder: 1
   db365edc-003d-4857-8d58-deb0de5e5caa:
     field: 5d17f8d2-9512-462c-b1ff-c603b102c66b
     fields:
@@ -3156,7 +3654,7 @@ system:
   edition: pro
   name: NGLXP
   live: true
-  schemaVersion: 3.2.15
+  schemaVersion: 3.2.16
   timeZone: America/New_York
 users:
   requireEmailVerification: true
