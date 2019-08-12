@@ -1,23 +1,28 @@
 {#
  |------------------------------------------------------------------------------
- | Rich Text Block Template
+ | Breadcrumb
  |------------------------------------------------------------------------------
 #}
 
+{% set breadcrumb = craft.breadcrumb.config %}
+{% if breadcrumb %}
 <nav id="wb-bc"  property="breadcrumb">
     <h2 class="wb-inv">{{ 'You are here:'|t }}</h2>
     <div class="container">
         <ol class='breadcrumb'>
-            <li><a href='{{ siteUrl }}'>{{ 'Home'|t }}</a></li>
-            {% set breadcrumbs = entry.ancestors.all() %}
-            {% if breadcrumbs|length %}
-                {% for crumb in breadcrumbs %}
-                    <li><a href="{{ crumb.url }}">{{ crumb.title }}</a></li>
-                {% endfor %}
-            {% endif %}
-            {% if craft.app.request.absoluteUrl() != siteUrl %}
-                <li><a href="{{ entry.url }}">{{ entry.title }}</a></li>
-            {% endif %}
+            {% for crumb in breadcrumb  %}
+                <li class="c-breadcrumb__item">
+                    <a class="c-breadcrumb__link" href="{{ crumb.url }}">
+                        {# @todo: remove this dirty hack and find out why the title is Home on the french site #}
+                        {% if shortlang == 'fr' and crumb.title == 'Home' %}
+                            <span>Accueil</span>
+                        {% else %}
+                            <span>{{ crumb.title }}</span>
+                        {% endif %}
+                    </a>
+                </li>
+            {% endfor %}
         </ol>
     </div>
 </nav>
+{% endif %}

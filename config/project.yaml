@@ -18,11 +18,49 @@ categoryGroups:
         hasUrls: false
         uriFormat: null
         template: null
+  6be1a6b0-bd54-42a6-bf24-93c6a15b1e51:
+    name: Audiences
+    handle: audiences
+    structure:
+      uid: 0e07d4a9-2a0f-40c5-8255-14d2a7b615a9
+      maxLevels: null
+    siteSettings:
+      0f776df8-4195-4588-9f72-337d0aa2d29d:
+        hasUrls: false
+        uriFormat: null
+        template: null
+      2816be6e-0138-4389-86a5-5b827a6dc153:
+        hasUrls: false
+        uriFormat: null
+        template: null
+      9f9e3c36-5381-4e1a-9003-66b89eb4e0a9:
+        hasUrls: false
+        uriFormat: null
+        template: null
   6c9f8750-6509-4791-bf3b-e09104234526:
     name: Topics
     handle: topics
     structure:
       uid: 3a82895e-c166-4e70-a37c-078efc58eb9e
+      maxLevels: null
+    siteSettings:
+      0f776df8-4195-4588-9f72-337d0aa2d29d:
+        hasUrls: false
+        uriFormat: null
+        template: null
+      2816be6e-0138-4389-86a5-5b827a6dc153:
+        hasUrls: false
+        uriFormat: null
+        template: null
+      9f9e3c36-5381-4e1a-9003-66b89eb4e0a9:
+        hasUrls: false
+        uriFormat: null
+        template: null
+  6d1c40e4-8e40-457f-a817-0b5d89bc2ac6:
+    name: 'Business lines'
+    handle: businessLines
+    structure:
+      uid: 2f756c4f-c685-4c12-9cd8-7f458c4d11a9
       maxLevels: null
     siteSettings:
       0f776df8-4195-4588-9f72-337d0aa2d29d:
@@ -72,9 +110,9 @@ categoryGroups:
         uriFormat: null
         template: null
       9f9e3c36-5381-4e1a-9003-66b89eb4e0a9:
-        hasUrls: true
-        uriFormat: 'communities/{slug}'
-        template: ''
+        hasUrls: false
+        uriFormat: null
+        template: null
   81be3ed5-3d08-42c6-bfbc-c9f8003b89c2:
     name: 'Job Aid Types'
     handle: jobAidTypes
@@ -151,6 +189,16 @@ categoryGroups:
         hasUrls: false
         uriFormat: null
         template: null
+    fieldLayouts:
+      da295e02-17f0-4b51-ac2a-98f6af1949d3:
+        tabs:
+          -
+            name: Settings
+            sortOrder: 1
+            fields:
+              5c03dc31-e22a-477a-bf03-94ab04083c0a:
+                required: false
+                sortOrder: 1
   cae28f98-7727-4254-9c5c-37f8b5efbe4e:
     name: 'Events Types'
     handle: eventsTypes
@@ -189,7 +237,7 @@ categoryGroups:
         hasUrls: false
         uriFormat: null
         template: null
-dateModified: 1564342614
+dateModified: 1565613009
 email:
   fromEmail: $SYSTEM_EMAIL_ADDRESS
   fromName: $SYSTEM_EMAIL_SENDER_NAME
@@ -200,12 +248,24 @@ email:
     password: $SYSTEM_EMAIL_PASSWORD
     timeout: '10'
 fieldGroups:
+  1b33b630-cc77-4a78-83ce-4096f50b8eaf:
+    name: Carousel
+  279a8514-f1d9-4442-9a87-c1024392e5e1:
+    name: Button
   996d0575-c87f-4fa8-a027-535c0523a9a4:
     name: Attributes
+  9d68299c-92e9-4da9-b086-3278d391d266:
+    name: Panel
   a2b0cba8-f5a0-44c0-b76b-0edabc62b760:
     name: 'Course Registration'
   aae3acdb-e54a-47cb-ba69-ca6500f39405:
     name: Common
+  b0337069-2fca-4d88-b6e6-8d814911fc4a:
+    name: Grid
+  d4a15f50-6d05-4c05-97fa-4fa252722dca:
+    name: Heading
+  dd364c62-7d29-4ff1-9814-ad590231c56e:
+    name: Quote
   e4089825-4346-4eed-813e-d1032e323d05:
     name: Body
 fields:
@@ -218,6 +278,8 @@ fields:
     translationKeyFormat: null
     type: craft\fields\MultiSelect
     settings:
+      multi: true
+      optgroups: true
       options:
         -
           label: col-xs-1
@@ -412,7 +474,7 @@ fields:
           value: col-lg-12
           default: ''
     contentColumnType: text
-    fieldGroup: e4089825-4346-4eed-813e-d1032e323d05
+    fieldGroup: b0337069-2fca-4d88-b6e6-8d814911fc4a
   153382e6-3baa-4f20-b50b-6aade8232a75:
     name: 'Course Author'
     handle: courseAuthor
@@ -441,7 +503,7 @@ fields:
     settings:
       default: ''
     contentColumnType: boolean
-    fieldGroup: e4089825-4346-4eed-813e-d1032e323d05
+    fieldGroup: 279a8514-f1d9-4442-9a87-c1024392e5e1
   1986fd69-4ea7-4ab2-a26f-4e87ed88623b:
     name: 'Video Title'
     handle: videoTitle
@@ -459,6 +521,28 @@ fields:
       columnType: text
     contentColumnType: text
     fieldGroup: e4089825-4346-4eed-813e-d1032e323d05
+  1a0bfea8-7642-4f7e-9293-d91e8e44f433:
+    name: Audiences
+    handle: audiences
+    instructions: ''
+    searchable: true
+    translationMethod: site
+    translationKeyFormat: null
+    type: craft\fields\Categories
+    settings:
+      allowLimit: false
+      allowMultipleSources: false
+      branchLimit: ''
+      sources: '*'
+      source: 'group:6be1a6b0-bd54-42a6-bf24-93c6a15b1e51'
+      targetSiteId: null
+      viewMode: null
+      limit: null
+      selectionLabel: ''
+      localizeRelations: ''
+      validateRelatedElements: ''
+    contentColumnType: string
+    fieldGroup: 996d0575-c87f-4fa8-a027-535c0523a9a4
   1aaf8984-7594-4240-b9e5-28dd722351d1:
     name: 'Youtube Url'
     handle: youtubeUrl
@@ -557,7 +641,7 @@ fields:
       charLimit: ''
       columnType: text
     contentColumnType: text
-    fieldGroup: e4089825-4346-4eed-813e-d1032e323d05
+    fieldGroup: dd364c62-7d29-4ff1-9814-ad590231c56e
   1d2d6296-e55f-4ebe-9252-645c4cab9228:
     name: 'Gallery Items'
     handle: galleryItems
@@ -599,7 +683,7 @@ fields:
       availableVolumes: ''
       availableTransforms: '*'
     contentColumnType: text
-    fieldGroup: e4089825-4346-4eed-813e-d1032e323d05
+    fieldGroup: 9d68299c-92e9-4da9-b086-3278d391d266
   27187c43-5082-4185-b805-5e3e3be34d57:
     name: Text
     handle: text
@@ -684,7 +768,29 @@ fields:
       charLimit: ''
       columnType: text
     contentColumnType: text
-    fieldGroup: e4089825-4346-4eed-813e-d1032e323d05
+    fieldGroup: d4a15f50-6d05-4c05-97fa-4fa252722dca
+  3db70a1f-c14a-4fb7-bfa6-4dc5984ecce5:
+    name: 'Business Lines'
+    handle: businessLines
+    instructions: ''
+    searchable: true
+    translationMethod: site
+    translationKeyFormat: null
+    type: craft\fields\Categories
+    settings:
+      allowLimit: false
+      allowMultipleSources: false
+      branchLimit: ''
+      sources: '*'
+      source: 'group:6d1c40e4-8e40-457f-a817-0b5d89bc2ac6'
+      targetSiteId: null
+      viewMode: null
+      limit: null
+      selectionLabel: ''
+      localizeRelations: ''
+      validateRelatedElements: ''
+    contentColumnType: string
+    fieldGroup: 996d0575-c87f-4fa8-a027-535c0523a9a4
   4bf01e02-d8a2-4348-b4bd-a810d21065bc:
     name: 'Carousel Transition'
     handle: carouselTransition
@@ -709,7 +815,7 @@ fields:
           value: slidevert
           default: ''
     contentColumnType: string
-    fieldGroup: e4089825-4346-4eed-813e-d1032e323d05
+    fieldGroup: 1b33b630-cc77-4a78-83ce-4096f50b8eaf
   4c1ea90c-6468-4078-9c22-b2a58bcb47b8:
     name: 'Carousel Speed'
     handle: carouselSpeed
@@ -730,7 +836,7 @@ fields:
           value: fast
           default: ''
     contentColumnType: string
-    fieldGroup: e4089825-4346-4eed-813e-d1032e323d05
+    fieldGroup: 1b33b630-cc77-4a78-83ce-4096f50b8eaf
   4ca82a9d-02e8-4639-8f63-56d678157748:
     name: 'Tab Items'
     handle: tabItems
@@ -830,7 +936,7 @@ fields:
       charLimit: ''
       columnType: text
     contentColumnType: text
-    fieldGroup: e4089825-4346-4eed-813e-d1032e323d05
+    fieldGroup: 9d68299c-92e9-4da9-b086-3278d391d266
   55d4ff60-80ba-422e-a806-e730afdd6ed3:
     name: 'Rich Text'
     handle: richText
@@ -868,7 +974,7 @@ fields:
       charLimit: ''
       columnType: text
     contentColumnType: text
-    fieldGroup: e4089825-4346-4eed-813e-d1032e323d05
+    fieldGroup: dd364c62-7d29-4ff1-9814-ad590231c56e
   5bcddc82-216a-41f9-bd6c-471428939ea1:
     name: Body
     handle: body
@@ -884,6 +990,23 @@ fields:
       maxTopBlocks: ''
     contentColumnType: string
     fieldGroup: e4089825-4346-4eed-813e-d1032e323d05
+  5c03dc31-e22a-477a-bf03-94ab04083c0a:
+    name: UUID
+    handle: uuid
+    instructions: ''
+    searchable: true
+    translationMethod: language
+    translationKeyFormat: null
+    type: craft\fields\PlainText
+    settings:
+      placeholder: ''
+      code: ''
+      multiline: ''
+      initialRows: '4'
+      charLimit: ''
+      columnType: text
+    contentColumnType: text
+    fieldGroup: aae3acdb-e54a-47cb-ba69-ca6500f39405
   5d17eb07-2b8b-4533-84d5-7e0b439ef3d4:
     name: 'Container Width'
     handle: containerWidth
@@ -893,6 +1016,7 @@ fields:
     translationKeyFormat: null
     type: craft\fields\Dropdown
     settings:
+      optgroups: true
       options:
         -
           label: Contained
@@ -903,7 +1027,7 @@ fields:
           value: container-fluid
           default: ''
     contentColumnType: string
-    fieldGroup: e4089825-4346-4eed-813e-d1032e323d05
+    fieldGroup: b0337069-2fca-4d88-b6e6-8d814911fc4a
   5d17f8d2-9512-462c-b1ff-c603b102c66b:
     name: 'Link List'
     handle: linkList
@@ -936,7 +1060,7 @@ fields:
     settings:
       default: ''
     contentColumnType: boolean
-    fieldGroup: e4089825-4346-4eed-813e-d1032e323d05
+    fieldGroup: 1b33b630-cc77-4a78-83ce-4096f50b8eaf
   5d31b541-85df-4bc7-8d73-ab0f8e378e72:
     name: 'LMS Course URL'
     handle: lmsCourseUrl
@@ -1078,7 +1202,7 @@ fields:
           value: panel-danger
           default: ''
     contentColumnType: string
-    fieldGroup: e4089825-4346-4eed-813e-d1032e323d05
+    fieldGroup: 9d68299c-92e9-4da9-b086-3278d391d266
   6c0db7b2-699b-4807-bf08-092abd76398b:
     name: Communities
     handle: communities
@@ -1097,6 +1221,27 @@ fields:
       selectionLabel: 'Add a community'
       localizeRelations: ''
     contentColumnType: string
+    fieldGroup: 996d0575-c87f-4fa8-a027-535c0523a9a4
+  6f73b4a5-f6b1-4731-96b9-b9cf23669d3e:
+    name: 'Course Description'
+    handle: courseDescription
+    instructions: ''
+    searchable: true
+    translationMethod: language
+    translationKeyFormat: null
+    type: craft\redactor\Field
+    settings:
+      redactorConfig: Standard.json
+      purifierConfig: ''
+      cleanupHtml: true
+      removeInlineStyles: '1'
+      removeEmptyTags: '1'
+      removeNbsp: '1'
+      purifyHtml: '1'
+      columnType: text
+      availableVolumes: '*'
+      availableTransforms: '*'
+    contentColumnType: text
     fieldGroup: 996d0575-c87f-4fa8-a027-535c0523a9a4
   73edc314-438f-4b80-a0f1-e2f675dd791d:
     name: Image
@@ -1138,10 +1283,15 @@ fields:
       contentTable: '{{%stc_carouselitems}}'
       propagationMethod: all
       staticField: ''
+      columns:
+        50:
+          width: ''
+        51:
+          width: ''
       fieldLayout: row
       selectionLabel: ''
     contentColumnType: string
-    fieldGroup: e4089825-4346-4eed-813e-d1032e323d05
+    fieldGroup: 1b33b630-cc77-4a78-83ce-4096f50b8eaf
   7b60b7a9-2d4d-4b42-b947-0d5bf0d29503:
     name: 'Equalize Columns Height'
     handle: equalizeColumnsHeight
@@ -1153,7 +1303,7 @@ fields:
     settings:
       default: ''
     contentColumnType: boolean
-    fieldGroup: e4089825-4346-4eed-813e-d1032e323d05
+    fieldGroup: b0337069-2fca-4d88-b6e6-8d814911fc4a
   85e8a9d6-a560-499a-be10-f1893dba12da:
     name: Topics
     handle: topics
@@ -1173,6 +1323,18 @@ fields:
       localizeRelations: ''
     contentColumnType: string
     fieldGroup: 996d0575-c87f-4fa8-a027-535c0523a9a4
+  8f0ab320-bac4-4a49-a25e-f43a644438fc:
+    name: 'Enable Breadcrumb'
+    handle: enableBreadcrumb
+    instructions: ''
+    searchable: true
+    translationMethod: none
+    translationKeyFormat: null
+    type: craft\fields\Lightswitch
+    settings:
+      default: '1'
+    contentColumnType: boolean
+    fieldGroup: aae3acdb-e54a-47cb-ba69-ca6500f39405
   91a9d8ed-0a10-4377-bdc7-e7b1ea173ec6:
     name: 'Featured Image'
     handle: featuredImage
@@ -1239,7 +1401,7 @@ fields:
           value: btn-link
           default: ''
     contentColumnType: string
-    fieldGroup: e4089825-4346-4eed-813e-d1032e323d05
+    fieldGroup: 279a8514-f1d9-4442-9a87-c1024392e5e1
   96506d95-3831-48b3-bbb0-080fe3c3975b:
     name: 'Heading Link'
     handle: headingLink
@@ -1308,7 +1470,7 @@ fields:
       defaultText: ''
       allowTarget: '1'
     contentColumnType: text
-    fieldGroup: e4089825-4346-4eed-813e-d1032e323d05
+    fieldGroup: d4a15f50-6d05-4c05-97fa-4fa252722dca
   99919f11-8ccd-460d-8d38-b591cc97b51e:
     name: 'Alert Type'
     handle: alertType
@@ -1397,7 +1559,7 @@ fields:
       charLimit: ''
       columnType: text
     contentColumnType: text
-    fieldGroup: e4089825-4346-4eed-813e-d1032e323d05
+    fieldGroup: dd364c62-7d29-4ff1-9814-ad590231c56e
   c4b752da-d488-479a-ab58-648146b8b804:
     name: 'Custom ID'
     handle: customId
@@ -1467,7 +1629,7 @@ fields:
       charLimit: ''
       columnType: text
     contentColumnType: text
-    fieldGroup: e4089825-4346-4eed-813e-d1032e323d05
+    fieldGroup: d4a15f50-6d05-4c05-97fa-4fa252722dca
   d4fbaec4-4c9d-4852-91f4-dbcf6084aeae:
     name: 'Carousel Autoplay'
     handle: carouselAutoplay
@@ -1479,7 +1641,7 @@ fields:
     settings:
       default: ''
     contentColumnType: boolean
-    fieldGroup: e4089825-4346-4eed-813e-d1032e323d05
+    fieldGroup: 1b33b630-cc77-4a78-83ce-4096f50b8eaf
   d546ade7-7bb3-4a49-bb7e-f4da80879227:
     name: 'Panel Content'
     handle: panelContent
@@ -1500,7 +1662,7 @@ fields:
       availableVolumes: '*'
       availableTransforms: '*'
     contentColumnType: text
-    fieldGroup: e4089825-4346-4eed-813e-d1032e323d05
+    fieldGroup: 9d68299c-92e9-4da9-b086-3278d391d266
   d6c10f33-7140-4969-ace1-bad77eedd52e:
     name: 'Heading Size'
     handle: headingSize
@@ -1510,6 +1672,7 @@ fields:
     translationKeyFormat: null
     type: craft\fields\Dropdown
     settings:
+      optgroups: true
       options:
         -
           label: H1
@@ -1536,7 +1699,7 @@ fields:
           value: h6
           default: ''
     contentColumnType: string
-    fieldGroup: e4089825-4346-4eed-813e-d1032e323d05
+    fieldGroup: d4a15f50-6d05-4c05-97fa-4fa252722dca
   d7094ffa-8ba4-4975-8b78-269b1c5def10:
     name: 'Button Size'
     handle: buttonSize
@@ -1565,7 +1728,7 @@ fields:
           value: btn-xs
           default: ''
     contentColumnType: string
-    fieldGroup: e4089825-4346-4eed-813e-d1032e323d05
+    fieldGroup: 279a8514-f1d9-4442-9a87-c1024392e5e1
   d99f24f5-652e-49ee-87f4-18d022b69504:
     name: 'Custom Class'
     handle: customClass
@@ -1652,6 +1815,18 @@ fields:
       columnType: text
     contentColumnType: text
     fieldGroup: a2b0cba8-f5a0-44c0-b76b-0edabc62b760
+  eac3ac5c-e009-4877-8be8-65329172508b:
+    name: 'Enable Login'
+    handle: enableLogin
+    instructions: ''
+    searchable: true
+    translationMethod: none
+    translationKeyFormat: null
+    type: craft\fields\Lightswitch
+    settings:
+      default: '1'
+    contentColumnType: boolean
+    fieldGroup: aae3acdb-e54a-47cb-ba69-ca6500f39405
   f0871c5c-7932-4f67-bbf4-9810329959e6:
     name: 'Column Offset'
     handle: columnOffset
@@ -1661,6 +1836,8 @@ fields:
     translationKeyFormat: null
     type: craft\fields\MultiSelect
     settings:
+      multi: true
+      optgroups: true
       options:
         -
           label: col-xs-offset-1
@@ -1855,7 +2032,7 @@ fields:
           value: col-lg-offset-12
           default: ''
     contentColumnType: text
-    fieldGroup: e4089825-4346-4eed-813e-d1032e323d05
+    fieldGroup: b0337069-2fca-4d88-b6e6-8d814911fc4a
   f92b0b75-2243-4c6d-a382-00f28b055903:
     name: 'Carousel Style'
     handle: carouselStyle
@@ -1876,7 +2053,7 @@ fields:
           value: carousel-s2
           default: ''
     contentColumnType: string
-    fieldGroup: e4089825-4346-4eed-813e-d1032e323d05
+    fieldGroup: 1b33b630-cc77-4a78-83ce-4096f50b8eaf
   ff00aba9-5514-4cd4-8d15-6e6bfe2dfaa4:
     name: Caption
     handle: caption
@@ -1898,6 +2075,23 @@ fields:
       availableTransforms: '*'
     contentColumnType: text
     fieldGroup: aae3acdb-e54a-47cb-ba69-ca6500f39405
+globalSets:
+  dd73edca-8d76-49da-ae84-7db565c259f5:
+    name: 'Global Settings'
+    handle: globalSettings
+    fieldLayouts:
+      92273609-8713-439a-ba6b-6a3d0a806d41:
+        tabs:
+          -
+            name: Settings
+            sortOrder: 1
+            fields:
+              8f0ab320-bac4-4a49-a25e-f43a644438fc:
+                required: false
+                sortOrder: 2
+              eac3ac5c-e009-4877-8be8-65329172508b:
+                required: false
+                sortOrder: 1
 neoBlockTypeGroups:
   201d592e-3d90-47a5-94b9-9c006a7732ea:
     field: 5bcddc82-216a-41f9-bd6c-471428939ea1
@@ -2613,7 +2807,7 @@ plugins:
       assetPath: dist/nglxp
   feed-me:
     edition: standard
-    enabled: false
+    enabled: true
     schemaVersion: 2.1.2
     settings:
       pluginName: Feeds
@@ -2661,6 +2855,10 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 2.2.0
+  breadcrumb:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.4
 sections:
   151bd318-9632-44f8-9304-47db451486d0:
     name: Ebooks
@@ -2990,42 +3188,48 @@ sections:
           193aefca-47d0-421e-a249-82b071f73e86:
             tabs:
               -
-                name: Description
+                name: 'Course Description'
                 sortOrder: 1
                 fields:
-                  5bcddc82-216a-41f9-bd6c-471428939ea1:
-                    required: false
-                    sortOrder: 3
                   67951067-d7e9-491d-bcf6-1fb42a4f08a2:
                     required: false
                     sortOrder: 2
+                  6f73b4a5-f6b1-4731-96b9-b9cf23669d3e:
+                    required: false
+                    sortOrder: 3
                   91a9d8ed-0a10-4377-bdc7-e7b1ea173ec6:
                     required: false
                     sortOrder: 1
               -
-                name: Attributes
+                name: 'Course Attributes'
                 sortOrder: 2
                 fields:
-                  4d72a8de-f240-4eba-879f-0e94f1aa0440:
-                    required: false
-                    sortOrder: 6
-                  4e9adc8b-275f-4cf9-99fd-15a6eebacebf:
-                    required: false
-                    sortOrder: 3
-                  6c0db7b2-699b-4807-bf08-092abd76398b:
-                    required: false
-                    sortOrder: 4
-                  85e8a9d6-a560-499a-be10-f1893dba12da:
-                    required: false
-                    sortOrder: 5
-                  b35b818b-b118-40fd-8c65-f22da5071611:
+                  1a0bfea8-7642-4f7e-9293-d91e8e44f433:
                     required: false
                     sortOrder: 1
-                  ca358ba5-2be3-4d29-9b66-c959e31c833e:
+                  3db70a1f-c14a-4fb7-bfa6-4dc5984ecce5:
                     required: false
                     sortOrder: 2
+                  4d72a8de-f240-4eba-879f-0e94f1aa0440:
+                    required: false
+                    sortOrder: 5
+                  4e9adc8b-275f-4cf9-99fd-15a6eebacebf:
+                    required: false
+                    sortOrder: 7
+                  6c0db7b2-699b-4807-bf08-092abd76398b:
+                    required: false
+                    sortOrder: 3
+                  85e8a9d6-a560-499a-be10-f1893dba12da:
+                    required: false
+                    sortOrder: 8
+                  b35b818b-b118-40fd-8c65-f22da5071611:
+                    required: false
+                    sortOrder: 4
+                  ca358ba5-2be3-4d29-9b66-c959e31c833e:
+                    required: false
+                    sortOrder: 6
               -
-                name: Registration
+                name: 'Course Registration'
                 sortOrder: 3
                 fields:
                   5d31b541-85df-4bc7-8d73-ab0f8e378e72:
@@ -3037,6 +3241,16 @@ sections:
                   e21d4101-d1c0-45af-8148-8cfd36d8a83f:
                     required: false
                     sortOrder: 2
+              -
+                name: 'Page Settings'
+                sortOrder: 4
+                fields:
+                  8f0ab320-bac4-4a49-a25e-f43a644438fc:
+                    required: false
+                    sortOrder: 2
+                  eac3ac5c-e009-4877-8be8-65329172508b:
+                    required: false
+                    sortOrder: 1
     propagationMethod: all
   daaab5d4-552e-4204-be22-d59054b19982:
     name: 'Podcasts Catalog'
@@ -3107,9 +3321,15 @@ sections:
                   67951067-d7e9-491d-bcf6-1fb42a4f08a2:
                     required: false
                     sortOrder: 2
+                  8f0ab320-bac4-4a49-a25e-f43a644438fc:
+                    required: false
+                    sortOrder: 3
                   91a9d8ed-0a10-4377-bdc7-e7b1ea173ec6:
                     required: false
                     sortOrder: 1
+                  eac3ac5c-e009-4877-8be8-65329172508b:
+                    required: false
+                    sortOrder: 4
     propagationMethod: all
   df3a9ba1-4452-4dcf-b63a-9217ed7cc0d3:
     name: Videos
@@ -3206,10 +3426,36 @@ sections:
       d4587f0e-ddd5-450d-9f91-5a6559380297:
         name: 'Courses Catalog'
         handle: coursesList
-        hasTitleField: '1'
+        hasTitleField: true
         titleLabel: Title
         titleFormat: '{section.name|raw}'
         sortOrder: 1
+        fieldLayouts:
+          dd859fc7-e030-40d5-9da8-6ecf25392c2e:
+            tabs:
+              -
+                name: Content
+                sortOrder: 1
+                fields:
+                  5bcddc82-216a-41f9-bd6c-471428939ea1:
+                    required: false
+                    sortOrder: 1
+              -
+                name: Settings
+                sortOrder: 2
+                fields:
+                  67951067-d7e9-491d-bcf6-1fb42a4f08a2:
+                    required: false
+                    sortOrder: 2
+                  8f0ab320-bac4-4a49-a25e-f43a644438fc:
+                    required: false
+                    sortOrder: 3
+                  91a9d8ed-0a10-4377-bdc7-e7b1ea173ec6:
+                    required: false
+                    sortOrder: 1
+                  eac3ac5c-e009-4877-8be8-65329172508b:
+                    required: false
+                    sortOrder: 4
     propagationMethod: all
   fc556283-8539-4dd1-aac3-fd2a719db71c:
     name: Home
@@ -3249,13 +3495,23 @@ sections:
                 fields:
                   5bcddc82-216a-41f9-bd6c-471428939ea1:
                     required: false
-                    sortOrder: 3
+                    sortOrder: 1
+              -
+                name: Settings
+                sortOrder: 2
+                fields:
                   67951067-d7e9-491d-bcf6-1fb42a4f08a2:
                     required: false
                     sortOrder: 2
+                  8f0ab320-bac4-4a49-a25e-f43a644438fc:
+                    required: false
+                    sortOrder: 3
                   91a9d8ed-0a10-4377-bdc7-e7b1ea173ec6:
                     required: false
                     sortOrder: 1
+                  eac3ac5c-e009-4877-8be8-65329172508b:
+                    required: false
+                    sortOrder: 4
     propagationMethod: all
 siteGroups:
   e0ab7182-1f37-4bbf-a439-fb4c5dde24a5:
