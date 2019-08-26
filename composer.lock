@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "18225298c8a69452906074f766d28df8",
+    "content-hash": "ee060da194073d82c3616f50cef86b54",
     "packages": [
         {
             "name": "aelvan/imager",
@@ -550,11 +550,11 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "3.2.9",
+            "version": "3.2.10",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/678ec9a876561152a74e5b3e07ebe0d2ca989c22",
-                "reference": "678ec9a876561152a74e5b3e07ebe0d2ca989c22",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/620fa9e16ae1d6d205868754959c459f55128da2",
+                "reference": "620fa9e16ae1d6d205868754959c459f55128da2",
                 "shasum": ""
             },
             "require": {
@@ -630,7 +630,7 @@
                 "docs": "https://docs.craftcms.com/v3/",
                 "rss": "https://github.com/craftcms/cms/releases.atom"
             },
-            "time": "2019-08-06T17:08:35+00:00"
+            "time": "2019-08-13T15:50:41+00:00"
         },
         {
             "name": "craftcms/feed-me",
@@ -1031,11 +1031,11 @@
         },
         {
             "name": "egulias/email-validator",
-            "version": "2.1.10",
+            "version": "2.1.11",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/egulias/EmailValidator/zipball/a6c8d7101b19a451c1707b1b79bbbc56e4bdb7ec",
-                "reference": "a6c8d7101b19a451c1707b1b79bbbc56e4bdb7ec",
+                "url": "https://api.github.com/repos/egulias/EmailValidator/zipball/92dd169c32f6f55ba570c309d83f5209cefb5e23",
+                "reference": "92dd169c32f6f55ba570c309d83f5209cefb5e23",
                 "shasum": ""
             },
             "require": {
@@ -1048,7 +1048,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.0.x-dev"
+                    "dev-master": "2.1.x-dev"
                 }
             },
             "autoload": {
@@ -1073,7 +1073,7 @@
                 "validation",
                 "validator"
             ],
-            "time": "2019-07-19T20:52:08+00:00"
+            "time": "2019-08-13T17:33:27+00:00"
         },
         {
             "name": "elvanto/litemoji",
@@ -2701,11 +2701,11 @@
         },
         {
             "name": "mikehaertl/php-shellcommand",
-            "version": "1.4.1",
+            "version": "1.5.0",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mikehaertl/php-shellcommand/zipball/903ee95d3ee8f65ebbe4c6e17705d1d91760521a",
-                "reference": "903ee95d3ee8f65ebbe4c6e17705d1d91760521a",
+                "url": "https://api.github.com/repos/mikehaertl/php-shellcommand/zipball/290fc6c330bc84a8820350ef68ed975053e0823c",
+                "reference": "290fc6c330bc84a8820350ef68ed975053e0823c",
                 "shasum": ""
             },
             "require": {
@@ -2717,7 +2717,6 @@
                     "mikehaertl\\shellcommand\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -2731,7 +2730,7 @@
             "keywords": [
                 "shell"
             ],
-            "time": "2018-07-07T07:35:36+00:00"
+            "time": "2019-08-17T06:39:51+00:00"
         },
         {
             "name": "mildlygeeky/craft-kint",
@@ -3123,11 +3122,11 @@
         },
         {
             "name": "nystudio107/craft-templatecomments",
-            "version": "1.1.0",
+            "version": "1.1.1",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-templatecomments/zipball/59a70bf51a9fdb16f09ad2347c439a2725ac5c3a",
-                "reference": "59a70bf51a9fdb16f09ad2347c439a2725ac5c3a",
+                "url": "https://api.github.com/repos/nystudio107/craft-templatecomments/zipball/f53f687ea9a93bef1414c95b3b94bbcc9ba12766",
+                "reference": "f53f687ea9a93bef1414c95b3b94bbcc9ba12766",
                 "shasum": ""
             },
             "require": {
@@ -3165,10 +3164,10 @@
                 "twig"
             ],
             "support": {
-                "docs": "https://github.com/nystudio107/craft-templatecomments/blob/v1/README.md",
-                "issues": "https://github.com/nystudio107/craft-templatecomments/issues"
+                "docs": "https://nystudio107.com/plugins/template-comments/documentation",
+                "issues": "https://nystudio107.com/plugins/template-comments/support"
             },
-            "time": "2019-06-12T16:40:45+00:00"
+            "time": "2019-08-24T14:20:37+00:00"
         },
         {
             "name": "nystudio107/craft-units",
@@ -3868,11 +3867,11 @@
         },
         {
             "name": "spicyweb/craft-neo",
-            "version": "2.4.2",
+            "version": "2.4.4",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spicywebau/craft-neo/zipball/4dde271c238b4241dc1b61a28dc3a9f8866de306",
-                "reference": "4dde271c238b4241dc1b61a28dc3a9f8866de306",
+                "url": "https://api.github.com/repos/spicywebau/craft-neo/zipball/c10a20f930bb7538f77863d475e2849e10631777",
+                "reference": "c10a20f930bb7538f77863d475e2849e10631777",
                 "shasum": ""
             },
             "require": {
@@ -3916,7 +3915,7 @@
                 "docs": "https://github.com/spicywebau/craft-neo/wiki",
                 "rss": "https://github.com/spicywebau/craft-neo/commits/master.atom"
             },
-            "time": "2019-08-08T12:19:33+00:00"
+            "time": "2019-08-21T06:09:52+00:00"
         },
         {
             "name": "ssnepenthe/color-utils",
@@ -5389,11 +5388,11 @@
         },
         {
             "name": "yiisoft/yii2-debug",
-            "version": "2.1.7",
+            "version": "2.1.8",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-debug/zipball/c54717af9172cf6233fea3eec113c0e0293e2bb2",
-                "reference": "c54717af9172cf6233fea3eec113c0e0293e2bb2",
+                "url": "https://api.github.com/repos/yiisoft/yii2-debug/zipball/959bf8206a3ec64f8949f62024a2c58d9a02e78f",
+                "reference": "959bf8206a3ec64f8949f62024a2c58d9a02e78f",
                 "shasum": ""
             },
             "require": {
@@ -5432,7 +5431,7 @@
                 "debugger",
                 "yii2"
             ],
-            "time": "2019-07-30T12:40:16+00:00"
+            "time": "2019-08-20T15:19:56+00:00"
         },
         {
             "name": "yiisoft/yii2-queue",
