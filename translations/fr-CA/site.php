@@ -14,6 +14,8 @@ return [
     "Signed in as" => "Connecté en tant que",
     "Account settings" => "Paramètres du compte",
     "Sign out" => "Fermer la session",
+    "https://learn-apprendre.csps-efpc.gc.ca/application/en" => "https://learn-apprendre.csps-efpc.gc.ca/application/fr",
+    "GCcampus login" => "Se connecter à GCcampus",
 
     // Breadcrumb
     'Home' => 'Accueil',
@@ -100,7 +102,7 @@ return [
     'Business Line' => 'Secteur d\'activité',
     
     // Course Entry Metadata
-    'Types:' => 'Mode :',
+    'Type:' => 'Mode :',
     'Duration:' => 'Durée :',
     'Topics:' => 'Sujets :',
     'Community:' => 'Communauté :',
@@ -111,4 +113,7 @@ return [
     'Upcoming offerings' => 'Offres à venir',
     'To register, you will be prompted to log in to your <a href="https://www.csps-efpc.gc.ca/gccampus-eng.aspx">GCcampus account</a>.' => 'Pour vous inscrire, vous serez invité à vous connecter à votre <a href="https://www.csps-efpc.gc.ca/gccampus-fra.aspx">compte GCcampus</a>.',
 
+    // Course Offerings
+    'Sorry! There is no offering available at moment.' => 'Désolé! Il n\'y a pas d\'offre pour le moment.',
+    'Location' => 'Emplacement',
 ];

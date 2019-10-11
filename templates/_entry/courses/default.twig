@@ -39,11 +39,38 @@
         $(document).ready(function() {
             $.ajax({
                 url: 'https://esb.nglxp.ca:8183/cxf/REST/{{ shortlang }}/offerings/{{ entry.lmsCourseId }}',
-                xhrFields: {
-                    withCredentials: true
-                },
                 success: function(response) {
-                    console.log(response);
+                    var $offeringsDiv = $('#offerings');
+                    if (response.length > 0) {
+                        var output = `
+                            <table class="table table-striped table-hover">
+                            <thead>
+                                <tr>
+                                    <th>{{ 'Date'|t }}</th>
+                                    <th>{{ 'ID'|t }}</th>
+                                    <th>{{ 'Type'|t }}</th>
+                                    <th>{{ 'Location'|t }}</th>
+                                    <th>{{ 'Language'|t }}</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                        `;
+                        $.each(response, function(index, item) {
+                            output += `
+                            <tr>
+                                <td>${item.startDate.split(' ')[0]}</td>
+                                <td>${item.offeringId}</td>
+                                <td>${item.deliveryType}</td>
+                                <td>${item.location}</td>
+                                <td>${item.language}</td>
+                            </tr>
+                            `;
+                        });
+                        output += `</tbody></table>`;
+                        $offeringsDiv.append(output);
+                    } else {
+                        $offeringsDiv.text('{{ "Sorry! There is no offering available at moment."|t }}');
+                    }
                 },
             });
         });
