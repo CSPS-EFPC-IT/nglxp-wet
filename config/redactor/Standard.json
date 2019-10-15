@@ -1,6 +1,7 @@
 {
-  "buttons": ["html", "formatting", "bold", "italic", "underline", "unorderedlist", "orderedlist", "link"],
-  "plugins": ["fullscreen"],
+  "buttons": ["html", "formatting", "bold", "italic", "underline", "unorderedlist", "orderedlist", "link", "image"],
+  "plugins": ["video", "table", "specialchars", "inlinestyle", "alignment", "properties", "fullscreen", "counter"],
   "linkNewTab": true,
-  "toolbarFixed": true
+  "toolbarFixed": true,
+  "pastePlainText": true
 }

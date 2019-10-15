@@ -237,7 +237,7 @@ categoryGroups:
         hasUrls: false
         uriFormat: null
         template: null
-dateModified: 1565613009
+dateModified: 1570799351
 email:
   fromEmail: $SYSTEM_EMAIL_ADDRESS
   fromName: $SYSTEM_EMAIL_SENDER_NAME
@@ -3654,7 +3654,7 @@ superTableBlockTypes:
                 required: true
                 sortOrder: 1
               8e699d72-c176-46a6-8f67-0a2a0d355578:
-                required: false
+                required: true
                 sortOrder: 2
   68c7ebc6-bca9-4736-ad01-098abcdc68bb:
     field: 1d2d6296-e55f-4ebe-9252-645c4cab9228
@@ -3910,7 +3910,7 @@ system:
   edition: pro
   name: NGLXP
   live: true
-  schemaVersion: 3.2.16
+  schemaVersion: 3.3.3
   timeZone: America/New_York
 users:
   requireEmailVerification: true

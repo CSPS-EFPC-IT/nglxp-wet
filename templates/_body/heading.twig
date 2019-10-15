@@ -5,20 +5,20 @@
 #}
 
 {# Format the heading content according to backend settings #}
-{% set headingContent %}
+{%- set headingContent -%}
     {# Optional hyperlink wrap around the heading text #}
-    {% if block.headingLink|length %}
+    {%- if block.headingLink|length -%}
         <a href="{{ block.headingLink.url }}" target="{{ block.headingLink.targetString }}">
-    {% endif %}
+    {%- endif -%}
     {# Required heading primary copy #}
-    {{ block.headingPrimaryText }}
+    {{- block.headingPrimaryText -}}
     {# Optional "small" heading secondary copy #}
-    {% if block.headingSecondaryText|length %}
-        &#8211; <span class="small">{{ block.headingSecondaryText }}</small>
-    {% endif %}
+    {%- if block.headingSecondaryText|length -%}
+        &#8211; <span class="small">{{- block.headingSecondaryText -}}</small>
+    {%- endif -%}
     {# Close the hyperlink tag if necessary #}
-    {% if block.headingLink|length %}</a>{% endif %}
-{% endset %}
+    {%- if block.headingLink|length -%}</a>{%- endif -%}
+{%- endset -%}
 
 {# Format the ID string #}
 {% if block.customId|length %}
@@ -29,5 +29,5 @@
 
 {# Output the heading block #}
 <{{ block.headingSize }}{{ customId }}{% if block.customClass|length %} class="{{ block.customClass }}"{% endif %}>    
-    {{ headingContent }}
+    {{- headingContent -}}
 </{{ block.headingSize }}>

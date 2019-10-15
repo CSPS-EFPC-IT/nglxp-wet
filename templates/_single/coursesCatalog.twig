@@ -23,7 +23,7 @@
                                 <select class="form-control" name="c_type" id="c_type" data-column="1">
                                     <option value="">{{ 'All courses types'|t }}</option>
                                     {% for category in craft.categories().group('deliveryTypes').all() %}
-                                        <option value="{{ category.title }}">{{ category.title }}</option>
+                                        <option value="{{- category.title -}}">{{ category.title }}</option>
                                     {% endfor %}
                                 </select>
                             </div>
@@ -32,7 +32,7 @@
                                 <select class="form-control" name="c_topic" id="c_topic" data-column="2">
                                     <option value="">{{ 'All topics'|t }}</option>
                                     {% for category in craft.categories().group('topics').all() %}
-                                        <option value="{{ category.title }}">{{ category.title }}</option>
+                                        <option value="{{- category.title -}}">{{ category.title }}</option>
                                     {% endfor %}
                                 </select>
                             </div>
@@ -41,7 +41,7 @@
                                 <select class="form-control" name="c_community" id="c_community" data-column="3">
                                     <option value="">{{ 'All communities'|t }}</option>
                                     {% for category in craft.categories().group('communities').all() %}
-                                        <option value="{{ category.title }}">{{ category.title }}</option>
+                                        <option value="{{- category.title -}}">{{ category.title }}</option>
                                     {% endfor %}
                                 </select>
                             </div>
@@ -50,7 +50,7 @@
                                 <select class="form-control" name="c_audience" id="c_audience" data-column="4">
                                     <option value="">{{ 'All audiences'|t }}</option>
                                     {% for category in craft.categories().group('audiences').all() %}
-                                        <option value="{{ category.title }}">{{ category.title }}</option>
+                                        <option value="{{- category.title -}}">{{ category.title }}</option>
                                     {% endfor %}
                                 </select>
                             </div>
@@ -59,7 +59,7 @@
                                 <select class="form-control" name="c_business_line" id="c_business_line" data-column="5">
                                     <option value="">{{ 'All business lines'|t }}</option>
                                     {% for category in craft.categories().group('businessLines').all() %}
-                                        <option value="{{ category.title }}">{{ category.title }}</option>
+                                        <option value="{{- category.title -}}">{{ category.title }}</option>
                                     {% endfor %}
                                 </select>
                             </div>
@@ -100,34 +100,34 @@
                             {% for course in entries.all() %}
                                 <tr>
                                     <td>
-                                        <a href="{{ course.url }}">{{ course.title }}</a>
+                                        <a href="{{ course.url }}">{{- course.title -}}</a>
                                         <br>
-                                        {{ course.courseDescription }}
+                                        {{- course.courseDescription -}}
                                     </td>
                                     <td class="hidden">
-                                        {% for category in course.deliveryTypes %}
-                                            {{ category.title ~ '; ' }}
-                                        {% endfor %}
+                                        {%- for category in course.deliveryTypes -%}
+                                            {{- category.title ~ ';' -}}
+                                        {%- endfor -%}
                                     </td>
                                     <td class="hidden">
-                                        {% for category in course.topics %}
-                                            {{ category.title ~ '; ' }}
-                                        {% endfor %}
+                                        {%- for category in course.topics -%}
+                                            {{- category.title ~ ';' -}}
+                                        {%- endfor -%}
                                     </td>
                                     <td class="hidden">
-                                        {% for category in course.communities %}
-                                            {{ category.title ~ '; ' }}
-                                        {% endfor %}
+                                        {%- for category in course.communities -%}
+                                            {{- category.title ~ ';' -}}
+                                        {%- endfor -%}
                                     </td>
                                     <td class="hidden">
-                                        {% for category in course.audiences %}
-                                            {{ category.title ~ '; ' }}
-                                        {% endfor %}
+                                        {%- for category in course.audiences -%}
+                                            {{- category.title ~ ';' -}}
+                                        {%- endfor -%}
                                     </td>
                                     <td class="hidden">
-                                        {% for category in course.businessLines %}
-                                            {{ category.title ~ '; ' }}
-                                        {% endfor %}
+                                        {%- for category in course.businessLines -%}
+                                            {{- category.title ~ ';' -}}
+                                        {%- endfor -%}
                                     </td>
                                 </tr>
                             {% endfor %}
