@@ -1,0 +1,26 @@
+# Environment variables
+/.env
+
+# PHPStorm project folder
+/.idea
+
+# Composer dependencies
+/vendor
+
+# IOS generated file
+.DS_Store
+
+# VSCode project folder
+.vscode/
+
+# Hide deployment key
+bin/deploy_key
+
+# NPM dependencies
+/node_modules
+
+# Remove license from git
+config/license.key
+
+# Remove AWS keypair
+nglxp_keypair.pem

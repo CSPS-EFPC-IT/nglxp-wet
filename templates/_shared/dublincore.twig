@@ -1,0 +1,277 @@
+{#
+ |------------------------------------------------------------------------------
+ | Dublin Core Metada
+ |------------------------------------------------------------------------------
+#}
+
+{% if entry is defined %}
+
+    {# Title #}
+    <meta name="dcterms.title" content="{{ entry.title }}">
+
+    {# Abstract #}
+    {% if entry.dcAbstract is defined and entry.dcAbstract is not empty %}
+        <meta name="dcterms.abstract" content="{{ entry.dcAbstract }}">
+    {% endif %}
+
+    {# Access Rights #}
+    {% if entry.dcAccessRights is defined and entry.dcAccessRights is not empty %}
+        <meta name="dcterms.accessRights" content="{{ entry.dcAccessRights }}">
+    {% endif %}
+
+    {# Accrual Method #}
+    {% if entry.dcAccrualMethod is defined and entry.dcAccrualMethod is not empty %}
+        <meta name="dcterms.accrualMethod" content="{{ entry.dcAccrualMethod }}">
+    {% endif %}
+
+    {# Accrual Periodicity #}
+    {% if entry.dcAccrualPeriodicity is defined and entry.dcAccrualPeriodicity is not empty %}
+        <meta name="dcterms.accrualPeriodicity" content="{{ entry.dcAccrualPeriodicity }}">
+    {% endif %}
+
+    {# Accrual Policy #}
+    {% if entry.dcAccrualPolicy is defined and entry.dcAccrualPolicy is not empty %}
+        <meta name="dcterms.accrualPolicy" content="{{ entry.dcAccrualPolicy }}">
+    {% endif %}
+
+    {# Alternative #}
+    {% if entry.dcAlternative is defined and entry.dcAlternative is not empty %}
+        <meta name="dcterms.alternative" content="{{ entry.dcAlternative }}">
+    {% endif %}
+
+    {# Audience #}
+    {% if entry.dcAudience is defined and entry.dcAudience is not empty %}
+        <meta name="dcterms.audience" content="{{ entry.dcAudience }}">
+    {% endif %}
+
+    {# Education Level #}
+    {% if entry.dcEducationLevel is defined and entry.dcEducationLevel is not empty %}
+        <meta name="dcterms.educationLevel" content="{{ entry.dcEducationLevel }}">
+    {% endif %}
+
+    {# Available #}
+    {% if entry.dcAvailable is defined and entry.dcAvailable is not empty %}
+        <meta name="dcterms.available" content="{{ entry.dcAvailable }}">
+    {% endif %}
+
+    {# Bibliographic Citation #}
+    {% if entry.dcBibliographicCitation is defined and entry.dcBibliographicCitation is not empty %}
+        <meta name="dcterms.bibliographicCitation" content="{{ entry.dcBibliographicCitation }}">
+    {% endif %}
+
+    {# Conforms To #}
+    {% if entry.dcConformsTo is defined and entry.dcConformsTo is not empty %}
+        <meta name="dcterms.conformsTo" content="{{ entry.dcConformsTo }}">
+    {% endif %}
+
+    {# Contributor #}
+    {% if entry.dcContributor is defined and entry.dcContributor is not empty %}
+        <meta name="dcterms.contributor" content="{{ entry.dcContributor }}">
+    {% endif %}
+
+    {# Coverage #}
+    {% if entry.dcCoverage is defined and entry.dcCoverage is not empty %}
+        <meta name="dcterms.coverage" content="{{ entry.dcCoverage }}">
+    {% endif %}
+
+    {# Created #}
+    {% if entry.dcCreated is defined and entry.dcCreated is not empty %}
+        <meta name="dcterms.created" content="{{ entry.dcCreated }}">
+    {% endif %}
+
+    {# Creator #}
+    {% if entry.dcCreator is defined and entry.dcCreator is not empty %}
+        <meta name="dcterms.creator" content="{{ entry.dcCreator }}">
+    {% endif %}
+
+    {# Date #}
+    {% if entry.dcDate is defined and entry.dcDate is not empty %}
+        <meta name="dcterms.date" content="{{ entry.dcDate }}">
+    {% endif %}
+
+    {# Date Accepted #}
+    {% if entry.dcDateAccepted is defined and entry.dcDateAccepted is not empty %}
+        <meta name="dcterms.dateAccepted" content="{{ entry.dcDateAccepted }}">
+    {% endif %}
+
+    {# Date Copyrighted #}
+    {% if entry.dcDateCopyrighted is defined and entry.dcDateCopyrighted is not empty %}
+        <meta name="dcterms.dateCopyrighted" content="{{ entry.dcDateCopyrighted }}">
+    {% endif %}
+
+    {# Date Submitted #}
+    {% if entry.dcDateSubmitted is defined and entry.dcDateSubmitted is not empty %}
+        <meta name="dcterms.dateSubmitted" content="{{ entry.dcDateSubmitted }}">
+    {% endif %}
+
+    {# Description #}
+    {% if entry.dcDescription is defined and entry.dcDescription is not empty %}
+        <meta name="dcterms.description" content="{{ entry.dcDescription }}">
+    {% endif %}
+
+    {# Extent #}
+    {% if entry.dcExtent is defined and entry.dcExtent is not empty %}
+        <meta name="dcterms.extent" content="{{ entry.dcExtent }}">
+    {% endif %}
+
+    {# Format #}
+    {% if entry.dcFormat is defined and entry.dcFormat is not empty %}
+        <meta name="dcterms.format" content="{{ entry.dcFormat }}">
+    {% endif %}
+
+    {# Has Part #}
+    {% if entry.dcHasPart is defined and entry.dcHasPart is not empty %}
+        <meta name="dcterms.hasPart" content="{{ entry.dcHasPart }}">
+    {% endif %}
+
+    {# Has Version #}
+    {% if entry.dcHasVersion is defined and entry.dcHasVersion is not empty %}
+        <meta name="dcterms.hasVersion" content="{{ entry.dcHasVersion }}">
+    {% endif %}
+
+    {# Identifier #}
+    {% if entry.dcIdentifier is defined and entry.dcIdentifier is not empty %}
+        <meta name="dcterms.identifier" content="{{ entry.dcIdentifier }}">
+    {% endif %}
+
+    {# Instructional Method #}
+    {% if entry.dcInstructionalMethod is defined and entry.dcInstructionalMethod is not empty %}
+        <meta name="dcterms.instructionalMethod" content="{{ entry.dcInstructionalMethod }}">
+    {% endif %}
+
+    {# Is Format Of #}
+    {% if entry.dcIsFormatOf is defined and entry.dcIsFormatOf is not empty %}
+        <meta name="dcterms.isFormatOf" content="{{ entry.dcIsFormatOf }}">
+    {% endif %}
+
+    {# Is Part Of #}
+    {% if entry.dcIsPartOf is defined and entry.dcIsPartOf is not empty %}
+        <meta name="dcterms.isPartOf" content="{{ entry.dcIsPartOf }}">
+    {% endif %}
+
+    {# Is Referenced By #}
+    {% if entry.dcIsReferencedBy is defined and entry.dcIsReferencedBy is not empty %}
+        <meta name="dcterms.isReferencedBy" content="{{ entry.dcIsReferencedBy }}">
+    {% endif %}
+
+    {# Is Replaced By #}
+    {% if entry.dcIsReplacedBy is defined and entry.dcIsReplacedBy is not empty %}
+        <meta name="dcterms.isReplacedBy" content="{{ entry.dcIsReplacedBy }}">
+    {% endif %}
+
+    {# Is Required By #}
+    {% if entry.dcIsRequiredBy is defined and entry.dcIsRequiredBy is not empty %}
+        <meta name="dcterms.isRequiredBy" content="{{ entry.dcIsRequiredBy }}">
+    {% endif %}
+
+    {# Is Version By #}
+    {% if entry.dcIsVersionOf is defined and entry.dcIsVersionOf is not empty %}
+        <meta name="dcterms.isVersionOf" content="{{ entry.dcIsVersionOf }}">
+    {% endif %}
+
+    {# Issued #}
+    {% if entry.dcIssued is defined and entry.dcIssued is not empty %}
+        <meta name="dcterms.issued" content="{{ entry.dcIssued }}">
+    {% endif %}
+
+    {# Language #}
+    {% if entry.dcLanguage is defined and entry.dcLanguage is not empty %}
+        <meta name="dcterms.language" content="{{ entry.dcLanguage }}">
+    {% endif %}
+
+    {# License #}
+    {% if entry.dcLicense is defined and entry.dcLicense is not empty %}
+        <meta name="dcterms.license" content="{{ entry.dcLicense }}">
+    {% endif %}
+
+    {# Mediator #}
+    {% if entry.dcMediator is defined and entry.dcMediator is not empty %}
+        <meta name="dcterms.mediator" content="{{ entry.dcMediator }}">
+    {% endif %}
+
+    {# Medium #}
+    {% if entry.dcMedium is defined and entry.dcMedium is not empty %}
+        <meta name="dcterms.medium" content="{{ entry.dcMedium }}">
+    {% endif %}
+
+    {# Modified #}
+    {% if entry.dcModified is defined and entry.dcModified is not empty %}
+        <meta name="dcterms.modified" content="{{ entry.dcModified }}">
+    {% endif %}
+
+    {# Provenance #}
+    {% if entry.dcProvenance is defined and entry.dcProvenance is not empty %}
+        <meta name="dcterms.provenance" content="{{ entry.dcProvenance }}">
+    {% endif %}
+
+    {# Publisher #}
+    {% if entry.dcPublisher is defined and entry.dcPublisher is not empty %}
+        <meta name="dcterms.publisher" content="{{ entry.dcPublisher }}">
+    {% endif %}
+
+    {# References #}
+    {% if entry.dcReferences is defined and entry.dcReferences is not empty %}
+        <meta name="dcterms.references" content="{{ entry.dcReferences }}">
+    {% endif %}
+
+    {# Relation #}
+    {% if entry.dcRelation is defined and entry.dcRelation is not empty %}
+        <meta name="dcterms.relation" content="{{ entry.dcRelation }}">
+    {% endif %}
+
+    {# Replaces #}
+    {% if entry.dcReplaces is defined and entry.dcReplaces is not empty %}
+        <meta name="dcterms.replaces" content="{{ entry.dcReplaces }}">
+    {% endif %}
+
+    {# Requires #}
+    {% if entry.dcRequires is defined and entry.dcRequires is not empty %}
+        <meta name="dcterms.requires" content="{{ entry.dcRequires }}">
+    {% endif %}
+
+    {# Rights #}
+    {% if entry.dcRights is defined and entry.dcRights is not empty %}
+        <meta name="dcterms.rights" content="{{ entry.dcRights }}">
+    {% endif %}
+
+    {# Rights Holder #}
+    {% if entry.dcRightsHolder is defined and entry.dcRightsHolder is not empty %}
+        <meta name="dcterms.rightsHolder" content="{{ entry.dcRightsHolder }}">
+    {% endif %}
+
+    {# Source #}
+    {% if entry.dcSource is defined and entry.dcSource is not empty %}
+        <meta name="dcterms.source" content="{{ entry.dcSource }}">
+    {% endif %}
+
+    {# Spatial #}
+    {% if entry.dcSpatial is defined and entry.dcSpatial is not empty %}
+        <meta name="dcterms.spatial" content="{{ entry.dcSpatial }}">
+    {% endif %}
+
+    {# Subject #}
+    {% if entry.dcSubject is defined and entry.dcSubject is not empty %}
+        <meta name="dcterms.subject" content="{{ entry.dcSubject }}">
+    {% endif %}
+
+    {# Table Of Contents #}
+    {% if entry.dcTableOfContents is defined and entry.dcTableOfContents is not empty %}
+        <meta name="dcterms.tableOfContents" content="{{ entry.dcTableOfContents }}">
+    {% endif %}
+
+    {# Temporal #}
+    {% if entry.dcTemporal is defined and entry.dcTemporal is not empty %}
+        <meta name="dcterms.temporal" content="{{ entry.dcTemporal }}">
+    {% endif %}
+
+    {# Type #}
+    {% if entry.dcType is defined and entry.dcType is not empty %}
+        <meta name="dcterms.type" content="{{ entry.dcType }}">
+    {% endif %}
+
+    {# Valid #}
+    {% if entry.dcValid is defined and entry.dcValid is not empty %}
+        <meta name="dcterms.valid" content="{{ entry.dcValid }}">
+    {% endif %}
+
+{% endif %}

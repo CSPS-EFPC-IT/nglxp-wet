@@ -1,0 +1,15 @@
+/*
+ * Custom website css
+ */
+
+@import 'blocks/alerts';
+@import 'blocks/buttons';
+@import 'blocks/images';
+@import 'blocks/lists';
+
+// CSPS Symbol beofre h1
+h1::before {
+    content: url(../img/csps-heading-symbol.png);
+    margin-right: 0.3em;
+    display: inline-block;
+}

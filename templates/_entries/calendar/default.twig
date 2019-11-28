@@ -1,0 +1,111 @@
+{% extends '_entries/default' %}
+
+{% block main %}
+    <main property="mainContentOfPage" typeof="WebPageElement" role="main">
+        {# Include the page builder template #}
+        {% include '_pageBuilder/builder' with {
+            pageBuilder: entry.pageBuilder
+        } %}
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <div id="calendar" class="cal-cnt-fluid"></div>
+                    <div id="calendar-data" class="wb-calevt evt-anchor wb-inv" data-calevt-src="calendar">
+                        <section>
+                            <h4>{{ 'CSPS Calendar'|t }}</h4>
+                            <ol>
+                                <li class="cal-disp-onshow">
+                                    <h5><a href="#">Event Title #1</a></h5>
+                                    <p><time datetime="2019-11-28">November 28th, 2019</time></p>
+                                    <p>Event Description</p>
+                                </li>
+                                <li>
+                                    <h5><a href="#">Event Title #2</a></h5>
+                                    <p><time datetime="2019-11-29">November 29th, 2019</time></p>
+                                    <p>Event Description</p>
+                                </li>
+                                <li>
+                                    <h5><a href="#">Event Title #3</a></h5>
+                                    <p><time datetime="2019-11-30">November 30th, 2019</time></p>
+                                    <p>Event Description</p>
+                                </li>
+                            </ol>
+                        </section>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <aside class="panel-default panel visible-sm visible-md visible-lg">
+                        <header class="panel-heading">
+                            <h3 class="panel-title">{{ "Learning links"|t }}</h3>
+                        </header>
+                        <div class="panel-body">
+                            <ul>
+                                <li><a href="#">{{ "Courses"|t }}</a></li>
+                                <li><a href="#">{{ "Events"|t }}</a></li>
+                                <li><a href="#">{{ "Videos on demand"|t }}</a></li>
+                            </ul>
+                        </div>
+                    </aside>
+                    <div class="alert alert-warning mrgn-tp-md">
+                        <p>{{ 'This page is a <b>beta release</b> and only displays upcoming offerings until <b>March 31, 2020</b>. <a href="#comments">Let us know what you think of it</a>.'|t|raw }}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <br>
+                    <p>{{ 'To register, you will be prompted to log in to your <a href="https://www.csps-efpc.gc.ca/gccampus-eng.aspx">GCcampus account</a>.'|t|raw }}</p>
+                    <table class="wb-tables table table-striped table-hover" id="calendar-dataset" aria-live="polite">
+                        <thead>
+                            <tr>
+                                <th>{{ 'Date'|t }}</th>
+                                <th>{{ 'Title'|t }}</th>
+                                <th>{{ 'Type'|t }}</th>
+                                <th>{{ 'Location'|t }}</th>
+                                <th>{{ 'Language'|t }}</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>28/11/2019</td>
+                                <td><a href="#">Event #1</a></td>
+                                <td>Classroom</td>
+                                <td>Montréal</td>
+                                <td>French/Français</td>
+                            </tr>
+                            <tr>
+                                <td>29/11/2019</td>
+                                <td><a href="#">Event #2</a></td>
+                                <td>Classroom</td>
+                                <td>Montréal</td>
+                                <td>French/Français</td>
+                            </tr>
+                            <tr>
+                                <td>30/11/2019</td>
+                                <td><a href="#">Event #3</a></td>
+                                <td>Classroom</td>
+                                <td>Montréal</td>
+                                <td>French/Français</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        {# Global features area #}
+        {% set showFeatures = settings.showFeaturesGlobal %}
+
+        {# Local override for showFeatures #}
+        {% if entry is defined and entry.showFeaturesLocal != 'default' %}
+            {% set showFeatures = entry.showFeaturesLocal.value %}
+        {% endif %}
+
+        {% if showFeatures %}
+            {% include '_pageBuilder/builder' with {
+                pageBuilder: features.pageBuilder
+            } %}
+        {% endif %}
+    </main>
+{% endblock %}

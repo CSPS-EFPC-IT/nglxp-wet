@@ -1,0 +1,116 @@
+{#
+ |------------------------------------------------------------------------------
+ | Course Entry
+ |------------------------------------------------------------------------------
+#}
+
+{% extends '_entries/default' %}
+{% import "_macros/utils" as utils %}
+
+{% block main %}
+    <main property="mainContentOfPage" typeof="WebPageElement" role="main">
+        {# Include the page builder template #}
+        {% include '_pageBuilder/builder' with {
+            pageBuilder: entry.pageBuilder
+        } %}
+
+        <div class="container">
+            <h1>{{ entry.title }}</h1>
+            <h2>{{ 'Description'|t }}</h2>
+            <p>{{- entry.description -}}</p>
+            <ul>
+                <li><strong>{{ 'Type:'|t }}</strong> {{ utils.categoryToString(entry.deliveryTypes) }}</li>
+                <li><strong>{{ 'Duration:'|t }}</strong> {{ entry.duration }}</li>
+                <li><strong>{{ 'Topics:'|t }}</strong> {{ utils.categoryToString(entry.topics) }}</li>
+                <li><strong>{{ 'Community:'|t }}</strong> {{ utils.categoryToString(entry.communities) }}</li>
+                <li><strong>{{ 'Audience:'|t }}</strong> {{ utils.categoryToString(entry.audiences) }}</li>
+                <li><strong>{{ 'Business line:'|t }}</strong> {{ utils.categoryToString(entry.businessLines) }}</li>
+                <li><strong>{{ 'Provider:'|t }}</strong> {{ utils.categoryToString(entry.contentProvider) }}</li>
+            </ul>
+            <h2>{{ 'Upcoming offerings'|t }}</h2>
+            <p>{{ 'To register, you will be prompted to log in to your <a href="https://www.csps-efpc.gc.ca/gccampus-eng.aspx">GCcampus account</a>.'|t|raw }}</p>
+
+            {% set firstDeliveryType = entry.deliveryTypes.one() %}
+            {% if firstDeliveryType|length %}
+                {% if firstDeliveryType.slug == 'online' %}
+                    <table class="table table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <th class="col-md-2">{{ 'Date'|t }}</th>
+                                <th class="col-md-4">{{ 'ID'|t }}</th>
+                                <th class="col-md-2">{{ 'Type'|t }}</th>
+                                <th class="col-md-2">{{ 'Location'|t }}</th>
+                                <th class="col-md-1">{{ 'Language'|t }}</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>{{ 'Self-paced'|t }}</td>
+                                <td><a href="{{ entry.courseUrl }}">{{ entry.title }}</a></td>
+                                <td>{{ 'Online'|t }}</td>
+                                <td>{{ 'Online'|t }}</td>
+                                <td>{{ 'English'|t }}</td>
+                            </tr>
+                        </tbody></table>
+                {% else %}
+                    {# @todo: move to its own js file, refactor using basic http auth #}
+                    <div id="offerings"></div>
+                    {% js %}
+                        $(document).ready(function() {
+                            $.ajax({
+                                url: 'https://esb.nglxp.ca:8183/cxf/REST/{{ LANG }}/offerings/{{ entry.courseId }}',
+                                success: function(response) {
+                                    var $offeringsDiv = $('#offerings');
+                                    if (response.length > 0) {
+                                        var output = `
+                                            <table class="table table-striped table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th>{{ 'Date'|t }}</th>
+                                                    <th>{{ 'ID'|t }}</th>
+                                                    <th>{{ 'Type'|t }}</th>
+                                                    <th>{{ 'Location'|t }}</th>
+                                                    <th>{{ 'Language'|t }}</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                        `;
+                                        $.each(response, function(index, item) {
+                                            output += `
+                                            <tr>
+                                                <td>${item.startDate.split(' ')[0]}</td>
+                                                <td>${item.offeringId}</td>
+                                                <td>${item.deliveryType}</td>
+                                                <td>${item.location}</td>
+                                                <td>${item.language}</td>
+                                            </tr>
+                                            `;
+                                        });
+                                        output += `</tbody></table>`;
+                                        $offeringsDiv.append(output);
+                                    } else {
+                                        $offeringsDiv.text('{{ "Sorry! There is no offering available at moment."|t }}');
+                                    }
+                                },
+                            });
+                        });
+                    {% endjs %}
+                {% endif %}
+            {% endif %}
+        </div>
+
+        {# Global features area #}
+        {% set showFeatures = settings.showFeaturesGlobal %}
+
+        {# Local override for showFeatures #}
+        {% if entry is defined and entry.showFeaturesLocal != 'default' %}
+            {% set showFeatures = entry.showFeaturesLocal.value %}
+        {% endif %}
+
+        {% if showFeatures %}
+            {% include '_pageBuilder/builder' with {
+                pageBuilder: features.pageBuilder
+            } %}
+        {% endif %}
+    </main>
+{% endblock %}

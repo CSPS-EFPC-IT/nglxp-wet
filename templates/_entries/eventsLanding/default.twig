@@ -1,0 +1,52 @@
+{% extends '_entries/default' %}
+
+{% block main %}
+    <main property="mainContentOfPage" typeof="WebPageElement" role="main">
+
+        {# Include the page builder template #}
+        {% include '_pageBuilder/builder' with {
+            pageBuilder: entry.pageBuilder
+        } %}
+
+        <div class="container">
+            <h2>{{ 'Upcoming events'|t }}</h2>
+            <table class="wb-tables table table-striped table-hover" id="events-dataset" aria-live="polite">
+                <thead>
+                    <tr>
+                        <th>{{ 'Title'|t }}</th>
+                        <th>{{ 'Date'|t }}</th>
+                        <th>{{ 'Location'|t }}</th>
+                        <th>{{ 'Language'|t }}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% set events = craft.entries.section('events').all()%}
+                {% if events|length %}
+                    {% for event in events %}
+                        <tr>
+                            <td class="col-md-6"><a href="{{ event.url }}">{{- event.title -}}</a></td>
+                            <td class="col-md-2">{{- event.eventDate|date('long') -}}</td>
+                            <td class="col-md-2">{{- event.eventLocation ?? 'N/A'|t -}}</td>
+                            <td class="col-md-2">{{- event.eventLanguage ?? 'N/A'|t -}}</td>
+                        </tr>
+                    {% endfor %}
+                {% endif %}
+                </tbody>
+            </table>
+        </div>
+
+        {# Global features area #}
+        {% set showFeatures = settings.showFeaturesGlobal %}
+
+        {# Local override for showFeatures #}
+        {% if entry is defined and entry.showFeaturesLocal != 'default' %}
+            {% set showFeatures = entry.showFeaturesLocal.value %}
+        {% endif %}
+
+        {% if showFeatures %}
+            {% include '_pageBuilder/builder' with {
+                pageBuilder: features.pageBuilder
+            } %}
+        {% endif %}
+    </main>
+{% endblock %}
